@@ -16,7 +16,7 @@ const HorizontalScroll = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-65%"]);
 
   return (
     <section ref={targetRef} className="relative bg-[#E1C5FE] h-[300vh]">
@@ -38,7 +38,7 @@ const Card = ({ card }) => {
       whileInView={{ x: -100, opacity: 1 }}
       transition={{ duration: 1 }}
       key={card.id}
-      className="group w-[800vw] h-[100px] relative md:h-[450px] md:w-[250vw] overflow-hidden"
+      className="group w-[800vw] h-[100px] relative md:h-[450px] md:w-[300vw] overflow-hidden"
     >
       {/* Background Image */}
       <div
@@ -53,19 +53,21 @@ const Card = ({ card }) => {
       {/* Text & Image Container */}
       <div className="absolute inset-0 z-10 flex items-center justify-center gap-4">
         <p className="text p-8 text-[30vw] md:text-[14vw] font-black text-[#1D284D] flex items-center">
-          <span className="text-[#828282]">Just</span>&nbsp;
+          {/* <span className="text-[#828282]">Just</span>&nbsp; */}
           <span className="hover:text-[#828282]">Explore,</span>&nbsp;
           {/* Circle Image */}
-          <span className="md:w-[10vw] md:h-[10vw] h-[20vw] w-[20vw] rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg">
+          <span className="md:w-[12vw] md:h-[10vw] h-[20vw] w-[20vw] rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg">
             <img
               src="./image/aboutPage/6_1.jpeg"
               alt="Profile"
               className="md:w-full md:h-full w-[20vw] h-[20vw] object-cover rounded-full"
             />
           </span>
-          &nbsp;<span className="hover:text-[#828282]">Enrich</span>
+          &nbsp;<span className="hover:text-[#828282]">Enrich,</span>
+          &nbsp;<span className="hover:text-[#828282]">Experience</span>
+          &nbsp;<span className="hover:text-[#828282]">&</span>
           &nbsp;<span className="hover:text-[#828282]">Embrace</span>
-          &nbsp;<span className="hover:text-[#828282]">it</span>
+          {/* &nbsp;<span className="hover:text-[#828282]">it</span> */}
         </p>
       </div>
     </motion.div>

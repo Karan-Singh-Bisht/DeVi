@@ -6,31 +6,31 @@ const testimonials = [
     image: "/image/aboutPage/11_1.png",
     bgColor: "#D1C4E9",
     title: "Gamer",
-    para: "I appreciate the convenience of being able to experience destinations from the comfort of my own home.",
+    para: "I matched with other local gamers and we even created a squad—super cool!",
   },
   {
     image: "/image/aboutPage/11_2.png",
     bgColor: "#CFD8DC",
-    title: "Youtuber",
-    para: "I appreciate the convenience of being able to experience destinations from the comfort of my own home.",
+    title: "Foodie",
+    para: "PopPins helped me discover a trending café around the corner!",
   },
   {
     image: "/image/aboutPage/11_3.png",
     bgColor: "#B39DDB",
     title: "Student",
-    para: "I appreciate the convenience of being able to experience destinations from the comfort of my own home.",
+    para: "Helps me stay connected on campus & discover cool events nearby!",
   },
   {
     image: "/image/aboutPage/11_4.png",
     bgColor: "#E0F7FA",
-    title: "Employee",
-    para: "I appreciate the convenience of being able to experience destinations from the comfort of my own home.",
+    title: "Traveler",
+    para: "From events to hidden gems, Mapo made every trip feel like home.",
   },
   {
     image: "/image/aboutPage/11_5.png",
     bgColor: "#ECEFF1",
-    title: "Entrepreneur",
-    para: "I appreciate the convenience of being able to experience destinations from the comfort of my own home.",
+    title: "Creator",
+    para: "Finally a place to share content that actually reaches the right crowd!",
   },
 ];
 
@@ -42,8 +42,9 @@ const Testimonials = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-[10vw] sm:text-[4vw] md:text-[3vw] text-center pb-[5vw] font-bold">
-          <span className="text-blue-600">DiVians</span> Fabulous Experience's
+        <h2 className="text-[10vw] font-poppins sm:text-[4vw] md:text-[3vw] text-center pb-[5vw] font-bold">
+          Fabulous Experience Shared By Our{" "}
+          <span className="text-[#8D93A5]">DVian's</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 mt-6">
           {testimonials.map((item, index) => (

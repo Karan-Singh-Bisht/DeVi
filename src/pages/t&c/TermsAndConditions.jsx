@@ -6,10 +6,10 @@ const TermsAndConditions = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen px-6 md:px-12 pb-2 bg-white text-black">
+    <div className="min-h-screen px-6 md:px-12 relative pb-2 bg-white text-black">
       {/* Back Button */}
       <button
-        className="w-[15vw] h-[8vh] sm:w-20 md:w-24 lg:w-[5vw] md:h-[10vh] flex items-center justify-center bg-black rounded-b-full"
+        className="w-[15vw] h-[8vh] absolute sm:w-20 md:w-24 lg:w-[5vw] md:h-[10vh] flex items-center justify-center bg-black rounded-b-full"
         onClick={() => navigate(-1)}
       >
         <IoChevronBack className="text-white text-[6vw] md:text-[4vw] sm:text-[6vw] lg:text-[3vw]" />
@@ -18,8 +18,12 @@ const TermsAndConditions = () => {
       {/* Header */}
       <div className="text-center flex flex-col items-center mb-10">
         <div className="flex justify-center items-center">
-          <img src="/image/homePage/1_3.png" alt="Logo" className="w-16 mb-4" />
-          <img src="/image/homePage/1_4.png" alt="Logo" className="w-32" />
+          {/* <img src="/image/homePage/1_3.png" alt="Logo" className="w-16 mb-4" /> */}
+          <img
+            src="/image/homePage/1_4.png"
+            alt="Logo"
+            className="w-32 mb-12"
+          />
         </div>
         <h2 className="text-3xl mt-2 font-semibold">Terms & Conditions</h2>
       </div>

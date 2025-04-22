@@ -7,7 +7,7 @@ const Navbar = ({ color }) => {
 
   return (
     <nav
-      className={`w-full h-[8vh] sm:h-[10vh] md:h-[12vh] flex backdrop-blur-xl justify-between fixed ${color} z-10 px-4 md:px-12 sm:px-6`}
+      className={`w-full h-[8vh] sm:h-[10vh] md:h-[12vh] flex justify-between ${color} px-4 md:px-12 sm:px-6`}
     >
       {/* Left Side: Back Button */}
       <button
@@ -19,11 +19,6 @@ const Navbar = ({ color }) => {
 
       {/* Center Logo: Positioned Dynamically */}
       <div className="flex items-center gap-1 absolute left-1/2 transform -translate-x-1/2">
-        {/* <img
-          src="./image/aboutPage/1_1.png"
-          alt="Company logo"
-          className="w-[12vw] sm:w-[10vw] md:w-[8vw] h-[12vw] sm:h-[10vw] md:h-[8vw]"
-        /> */}
         <img
           src="./image/aboutPage/1_2.png"
           alt="Company Name"

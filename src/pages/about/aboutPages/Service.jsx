@@ -7,50 +7,55 @@ const Service = () => {
   const features = [
     {
       id: 1,
-      title: "Social Media",
-      backgroundColor: "#F8F6F5",
+      title: "Personalized Discover",
+      backgroundColor: "#FEF6DA",
       size: "md:col-span-3",
       height: "490px",
     },
     {
       id: 2,
-      title: "Customized Maps",
-      backgroundColor: "#9FFFB8",
+      title: "Geo Location Based Feed",
+      backgroundColor: "#E1F4FE",
       size: "md:col-span-3",
       height: "490px",
     },
     {
       id: 3,
-      title: "AR & VR Experience",
-      backgroundColor: "#70778D",
+      title: (
+        <>
+          Categorized
+          <br /> Feed
+        </>
+      ),
+      backgroundColor: "#D5DFFF",
       size: "md:col-span-3",
       height: "240px",
-      textColor: "text-white",
+      textColor: "text-black",
     },
     {
       id: 4,
-      title: "Food",
-      backgroundColor: "bg-yellow-50",
+      title: "Visiofeed Swipe Based",
+      backgroundColor: "#FFECD6",
       size: "md:col-span-3",
       height: "240px",
     },
     {
       id: 5,
-      title: "Interactive Buddies Section",
+      title: "Interactive Mapo",
       backgroundColor: "bg-pink-50",
       size: "md:col-span-6",
       height: "210px",
     },
     {
       id: 6,
-      title: "Personalized Chat",
+      title: "Immersive Chat Space",
       backgroundColor: "bg-[#DFC9BE]",
       size: "md:col-span-3",
       height: "490px",
     },
     {
       id: 7,
-      title: "Multiple Category",
+      title: "Unique Profile",
       backgroundColor: "bg-[#EAF1F4]",
       size: "md:col-span-2",
       height: "490px",
@@ -73,10 +78,16 @@ const Service = () => {
   return (
     <div className="w-full min-h-screen px-6 py-12 bg-[#FFFFFF]">
       {/* Title Section */}
-      <motion.div {...fadeInUpAnimation} className="text-center md:my-5">
-        <h1 className="md:text-[4vw] text-[8vw] font-bold text-black">
-          Magical Immersive <span className="text-[#7E22CE]">Features</span>
+      <motion.div
+        {...fadeInUpAnimation}
+        className="text-center flex flex-col md:my-5"
+      >
+        <h1 className="md:text-[4vw] text-[8vw] font-bold font-poppins text-[#1C274C]">
+          Magical Social <span className="text-[#8D93A5]">Superpowers</span>
         </h1>
+        <p className="font-openSans font-semibold text-[2vw]">
+          Everything You Need, Just a Tap Away
+        </p>
       </motion.div>
 
       <div className="max-w-5xl mx-auto">
@@ -97,7 +108,7 @@ const Service = () => {
               >
                 <img
                   loading="lazy"
-                  src="/image/aboutPage/3_1.gif"
+                  src="/image/aboutPage/3_1.png"
                   alt={features[0].title}
                   className="md:w-auto w-full max-w-full h-auto max-h-full object-contain"
                 />
@@ -140,16 +151,18 @@ const Service = () => {
                   backgroundColor: features[2].backgroundColor,
                 }}
               >
-                {/* Image Container */}
-                <img
-                  loading="lazy"
-                  src="/image/aboutPage/3_3.png"
-                  alt={features[2].title}
-                  className="w-auto max-w-[80%] h-auto max-h-[80%] object-contain"
-                />
+                <div className="w-[40%]">
+                  {/* Image Container */}
+                  <img
+                    loading="lazy"
+                    src="/ic/Categorized Feed.png"
+                    alt={features[2].title}
+                    className="w-auto h-auto max-h-[90%] object-cover absolute top-5 right-12"
+                  />
+                </div>
 
                 {/* Text Overlay */}
-                <div className="absolute bottom-4 left-4 z-20 text-center">
+                <div className="absolute w-[60%] bottom-4 left-4 z-20">
                   <h3
                     className={`text-2xl ${
                       features[2].textColor || "text-black"
@@ -162,16 +175,25 @@ const Service = () => {
 
               {/* Food */}
               <div
-                className="overflow-hidden w-full rounded-3xl relative"
-                style={{ height: features[3].height }}
+                className={`overflow-hidden flex w-full rounded-3xl relative`}
+                style={{
+                  height: features[3].height,
+                  backgroundColor: features[3].backgroundColor,
+                }}
               >
-                <div
-                  className={`${features[3].backgroundColor} h-full p-6 flex flex-col justify-center`}
-                >
-                  <img loading="lazy" src="/image/aboutPage/3_4.gif" alt="" />
-                  <div className="z-20 absolute bottom-4 left-4">
-                    <h3 className="text-2xl font-bold">{features[3].title}</h3>
-                  </div>
+                {/* Text on the left */}
+                <div className="z-20 w-[50%] absolute bottom-4 left-4">
+                  <h3 className="text-2xl font-bold">{features[3].title}</h3>
+                </div>
+
+                {/* Image on the right */}
+                <div className="w-[50%] h-full ml-auto">
+                  <img
+                    loading="lazy"
+                    src="/ic/Visiofeed Swipe Based.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -199,7 +221,7 @@ const Service = () => {
                   {/* Responsive Image */}
                   <img
                     loading="lazy"
-                    src="/image/aboutPage/3_6.png"
+                    src="/ic/Immersive Chat Space.png"
                     alt={features[5].title}
                     className="w-full md:w-[80%] h-auto object-contain"
                   />
@@ -219,15 +241,15 @@ const Service = () => {
                 className="w-full md:w-1/2 bg-[#f6f3f3] h-[490px] md:h-[210px] overflow-hidden rounded-3xl relative"
               >
                 <div
-                  className="relative h-full p-4 flex flex-col justify-center items-center"
+                  className="relative h-full p-4 pt-2 flex flex-col justify-center items-center"
                   style={{ backgroundColor: features[6].backgroundColor }}
                 >
                   {/* Responsive Image */}
                   <img
                     loading="lazy"
-                    src="/image/aboutPage/3_7.gif"
+                    src="/ic/Unique Profile.png"
                     alt={features[6].title}
-                    className="w-full md:w-[100%] h-auto object-cover"
+                    className="w-full md:w-[85%] h-auto object-cover"
                   />
 
                   {/* Title Text */}
@@ -250,21 +272,20 @@ const Service = () => {
                 style={{ height: features[4].height }}
               >
                 <div
-                  className="relative h-full bg-yellow-50 p-6 flex flex-col items-center justify-center"
+                  className="relative h-full bg-yellow-50 p-6 flex items-center w-full justify-around"
                   style={{ backgroundColor: features[4].backgroundColor }}
                 >
-                  {/* Responsive Image */}
-                  <img
-                    loading="lazy"
-                    src="/image/aboutPage/3_5.png"
-                    alt={features[4].title}
-                    className="w-full md:w-3/4 absolute right-0 max-w-[80%] h-auto object-contain"
-                  />
-
                   {/* Title Text */}
                   <h3 className="text-lg md:text-xl font-bold absolute bottom-3 left-4 md:left-6 text-center md:text-left z-20">
                     {features[4].title}
                   </h3>
+                  {/* Responsive Image */}
+                  <img
+                    loading="lazy"
+                    src="/ic/Interactive Mapo.png"
+                    alt={features[4].title}
+                    className="w-full md:w-2/5 absolute right-10 max-w-[45%] h-auto object-cover"
+                  />
                 </div>
               </motion.div>
             </div>

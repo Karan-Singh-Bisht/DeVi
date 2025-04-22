@@ -18,7 +18,7 @@ const Awards = () => {
 
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <motion.img
-            initial={{ x: -150, y: 30, opacity: 0 }}
+            initial={{ x: -250, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             src="/image/aboutPage/12_1.jpeg"
@@ -26,7 +26,7 @@ const Awards = () => {
             className="w-[4rem] sm:w-[5rem] md:w-[6rem] h-auto rounded-md shadow-md"
           />
           <motion.img
-            initial={{ x: 150, y: 30, opacity: 0 }}
+            initial={{ x: 250, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             src="/image/aboutPage/12_2.jpeg"

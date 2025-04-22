@@ -7,10 +7,10 @@ const Privacy = () => {
 
   return (
     <div>
-      <div className="min-h-screen px-6 md:px-12 pb-2 bg-white text-black">
+      <div className="min-h-screen px-6 relative md:px-12 pb-2 bg-white text-black">
         {/* Back Button */}
         <button
-          className="w-[15vw] h-[8vh] sm:w-20 md:w-24 lg:w-[5vw] md:h-[10vh] flex items-center justify-center bg-black rounded-b-full"
+          className="w-[15vw] absolute h-[8vh] sm:w-20 md:w-24 lg:w-[5vw] md:h-[10vh] flex items-center justify-center bg-black rounded-b-full"
           onClick={() => navigate(-1)}
         >
           <IoChevronBack className="text-white text-[6vw] md:text-[4vw] sm:text-[6vw] lg:text-[3vw]" />
@@ -18,13 +18,17 @@ const Privacy = () => {
 
         {/* Header */}
         <div className="text-center flex flex-col items-center mb-10">
-          <div className="flex justify-center items-center">
-            <img
+          <div className="flex">
+            {/* <img
               src="/image/homePage/1_3.png"
               alt="Logo"
               className="w-16 mb-4"
+            /> */}
+            <img
+              src="/image/homePage/1_4.png"
+              alt="Logo"
+              className="w-32 mb-12"
             />
-            <img src="/image/homePage/1_4.png" alt="Logo" className="w-32" />
           </div>
           <h2 className="text-3xl mt-2 font-semibold">Privacy Policy</h2>
         </div>

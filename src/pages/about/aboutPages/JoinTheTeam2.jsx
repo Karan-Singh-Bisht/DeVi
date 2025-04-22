@@ -95,11 +95,11 @@ export default function JoinTheTeam2() {
 
   // Desktop version with animations
   return (
-    <div className="bg-[#E7F1FF] min-h-[40vh] md:min-h-[135vh] flex flex-col items-center justify-center overflow-hidden relative">
+    <div className="bg-white min-h-[40vh] md:min-h-[135vh] flex flex-col items-center justify-center overflow-hidden relative">
       <div className="flex items-center relative justify-center mt-16">
         {/* Animated Outer Gray Circle */}
         <motion.div
-          className="w-[36vw] h-[36vw] bg-gray-400 rounded-full relative z-10"
+          className="w-[36vw] h-[36vw] bg-[#E3E5FC] rounded-full relative z-10"
           initial="initial"
           whileInView="expanded"
           variants={circleVariants}
@@ -107,23 +107,6 @@ export default function JoinTheTeam2() {
         {/* Inner White Circle positioned absolutely over the outer circle */}
         <div className="absolute z-20 w-[24vw] h-[24vw] bg-white rounded-full flex flex-col items-center justify-center shadow-[0_0_20px_10px_rgba(255,255,255,0.6)]">
           <AnimatePresence mode="wait">
-            {!showDetailed && (
-              <motion.div
-                key="simple"
-                className="absolute flex flex-col items-center"
-                variants={simpleContentVariants}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-              >
-                <h1 className="text-3xl w-[70vw] md:text-4xl font-bold text-center">
-                  Join The <span className="text-blue-600">DeVi</span> Team
-                </h1>
-                <button className="rounded-3xl px-1 py-1 text-xs md:px-4 md:py-2 text-white bg-purple-950 md:mt-[2vw]">
-                  Join Our Team
-                </button>
-              </motion.div>
-            )}
             {showDetailed && (
               <motion.div
                 key="detailed"
@@ -135,14 +118,20 @@ export default function JoinTheTeam2() {
               >
                 <div className="flex relative flex-col w-full items-center">
                   <div className="w-[40vw] h-[40vw] flex items-center justify-center relative z-10 bg-white rounded-full shadow-2xl">
+                    {/* The image */}
                     <img
                       className="w-[40vw] h-[40vw] rounded-full object-cover"
-                      src="/image/aboutPage/11_3.png"
+                      src="/image/aboutPage/GirlFront.png"
                       alt="image"
                     />
-                    <div className="absolute">
-                      <h1 className="text-[4vw] font-semibold">
-                        Join the DeVi team
+
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 rounded-full bg-black bg-opacity-20" />
+
+                    {/* Your caption and button */}
+                    <div className="absolute bottom-10 flex flex-col items-center">
+                      <h1 className="text-[2vw] font-openSans font-bold text-white">
+                        Join the DV team
                       </h1>
                       <motion.div
                         className="mt-[4vw] flex flex-wrap gap-4 justify-center"
@@ -152,10 +141,13 @@ export default function JoinTheTeam2() {
                       >
                         <a href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947">
                           <motion.div variants={buttonItemVariants}>
-                            <Button
-                              text={"Join The Team"}
-                              image={"/image/aboutPage/1_4.png"}
-                            />
+                            <button className="flex items-center bg-white text-white px-4 py-2 sm:px-8 sm:py-2 rounded-2xl gap-2 sm:gap-3">
+                              <img
+                                src="/image/aboutPage/HandShake.png"
+                                alt="Handshake"
+                                className="w-8 h-8 sm:w-10 sm:h-10 rounded-md"
+                              />
+                            </button>
                           </motion.div>
                         </a>
                       </motion.div>

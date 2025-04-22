@@ -3,48 +3,66 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const faqData = [
   {
-    title: "Account & Login",
+    title: "📌 Most Frequently Asked",
     items: [
-      "We prioritize real-world connection and meaningful content discovery. With features like Mapo, PopPins, and Visiofeed, you’re always in sync with your interests, location, and community.",
-      "Yes! You have full control over your visibility and data. Choose what to share, with whom, and when.",
-      "Through smart Bluetooth and location engines, the platform matches you with others based on shared interests and keyword tags — no awkward ice-breakers needed.",
-      "Yes, the core features are completely free! Premium features may be introduced later with added value.",
+      "What makes this platform different from other social media apps?  We prioritize real-world connection and meaningful content discovery. With features like Mapo, PopPins, and Visiofeed, you're always in sync with your interests, location, and community.",
+      "Can I use the app without sharing my personal data?  Yes! You have full control over your visibility and data. Choose what to share, with whom, and when.",
+      "How does Infonics connect people nearby?  Through smart Bluetooth and location signals, the platform matches you with others based on shared interests and keyword tags — no awkward ice-breakers needed.",
+      "Is this app free to use?  Yes, the core features are completely free! Premium features may be introduced later with added value.",
     ],
   },
   {
-    title: "InfoCard & Virtual Visiting Card",
+    title: "👤 Account & Login",
     items: [
-      "We prioritize real-world connection and meaningful content discovery...",
-      "Yes! You have full control over your visibility and data.",
-      "Smart Bluetooth and location matching based on shared interests.",
-      "Completely free core features, premium might come later.",
+      "How do I sign up for the platform?  Simply enter your mobile number, verify via OTP, and you’re in! No email or password hassle.",
+      "I didn’t receive my OTP. What should I do?  Make sure your network is stable. If not received within a few minutes, tap “Resend OTP” on the verification screen.",
+      "Can I use the same account on multiple devices?  Yes, but you’ll be required to re-verify via OTP on each new device for security reasons.",
+      "How do I update my profile or preferences?  Tap your avatar > Settings > Profile or Preferences. You can update your InfoCard, interests, visibility, and language here.",
     ],
   },
   {
-    title: "Mapo & PopPins",
+    title: "💳 InfoCard / Virtual Visiting Card",
     items: [
-      "Stay synced with your surroundings using Mapo & PopPins.",
-      "Control your sharing preferences and visibility easily.",
-      "Effortless matching using Bluetooth and location-based tags.",
-      "All basic features are free to use!",
+      "What is InfoCard?  InfoCard is your virtual identity — a smart profile that helps others discover you at events, workplaces, or cafes within 100m using Bluetooth-based keyword matching.",
+      "Can I hide my InfoCard visibility?  Yes. You can toggle visibility based on time, location, or even audience type (e.g., Professionals only, Friends only).",
+      "Is InfoCard secure for networking?  Absolutely. Only those within range and matching your keywords will see your profile, and you can approve any connection.",
+      "Can I customize my InfoCard for different scenarios?  Yes! You can save multiple modes like 'Event', 'Work', or 'Chill', and switch between them in a tap.",
     ],
   },
   {
-    title: "Connect & Visiofeed",
+    title: "📍 Mapo & PopPins",
     items: [
-      "Visiofeed helps you discover live visual content tailored to you.",
-      "Privacy-first with customizable visibility settings.",
-      "Instant ice-breaker-free matching through shared tags.",
-      "Enjoy all essential features at no cost!",
+      "What is Mapo?  Mapo is your dynamic map that shows people, places, and opportunities around you — from cafes to creators to car chargers.",
+      "How are PopPins different from regular map markers?  PopPins are curated by real users, verified by activity, and tailored to your preferences — no fake reviews or outdated spots.",
+      "Can I add my own PopPins?  Yes! Just long press a location and tag it with a category, image, and description. You’ll help others explore better.",
+      "Is GPS required for Mapo?  It enhances accuracy but many discovery features also work via Bluetooth for close-range discovery and low-data usage.",
     ],
   },
   {
-    title: "Events & Discovery",
+    title: "💡 Content & Visiofeed",
     items: [
-      "Find and join events that matter to you in real-time.",
-      "Share only what you want, when you want.",
-      "Connect with people through mutual interests seamlessly.",
-      "Yes, most features are free with optional add-ons later.",
+      "How does Visiofeed work?  Visiofeed is a swipe-based feed tailored to your interests, language, and location. You swipe, save, double-tap to view more — and even match with creators or fans like you.",
+      "Can I filter what content I see?  Yes! You can filter content based on categories, tags, location range, and preferred language.",
+      "Can I post my own content?  Absolutely. Share photos, short videos, or PopPins. Tag topics or locations for better reach.",
+      "Will I see content in my language?  Yes, we support multilingual feeds and allow you to set a preferred language for content and discovery.",
+    ],
+  },
+  {
+    title: "🎉 Events & Discovery",
+    items: [
+      "How can I find events happening near me?  Use the Mapo or PopPins feature to view real-time local events, meetups, or hotspots around you—customized to your interests and location.",
+      "Can I create my own event or gathering?  Yes! Tap the '+' button in Mapo or Events and fill in the details. You can make it public, private, or interest-specific.",
+      "Will my event be discoverable by others nearby?  Yes, if you allow public visibility, it will appear on the map for people within range or those interested in the event category.",
+      "Can I match with attendees before or during an event?  Definitely! Infonics allows profile visibility at events, so you can view, connect, and meet people before the awkward introductions.",
+    ],
+  },
+  {
+    title: "🔐 Privacy & Security",
+    items: [
+      "Is my location always visible to others?  No. You control when and where your location is shared. You can turn off visibility anytime in the privacy settings.",
+      "How do I manage who can see my InfoCard or profile?  You can choose between Public, Only Nearby, Friends, or Custom audiences. Toggle visibility based on situation.",
+      "Are the profiles on the app verified?  Yes, we verify all users through number-based verification and give options for further professional or identity-based verification.",
+      "Can I block or report users?  Absolutely. Tap on the profile > More Options > Block or Report. Your safety and comfort come first.",
     ],
   },
 ];

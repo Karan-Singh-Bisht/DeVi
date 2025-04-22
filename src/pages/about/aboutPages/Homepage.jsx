@@ -71,7 +71,7 @@ const Homepage = () => {
       visible: {
         opacity: 1,
         transition: {
-          delay: 0.8,
+          delay: 1.6,
           staggerChildren: 0.2,
         },
       },
@@ -96,77 +96,46 @@ const Homepage = () => {
   );
 
   return (
-    <motion.div
-      className="flex relative font-roboto gap-4 flex-col h-[160vw] md:h-screen overflow-x-hidden overflow-hidden"
-      style={{ backgroundColor: isClient ? backgroundColor : "#E4F2FF" }}
-    >
+    <motion.div className="flex relative font-roboto gap-4 flex-col h-[160vw] md:h-screen overflow-x-hidden overflow-hidden">
       {/* Navbar */}
-      <div className="sticky top-0 w-full z-50">
-        <div className="absolute inset-0 bg-white bg-opacity-20 backdrop-blur-sm" />
+      <div className="w-full ">
         <Navbar color={backgroundColor} />
       </div>
 
       {/* Hero Section */}
       <motion.section
-        className="flex flex-col flex-1 items-center justify-center mt-[15vh] px-6 text-center relative"
+        className="flex flex-col flex-1 items-center justify-start mt-[6vw] bg-white px-6 text-center relative "
         style={{
           opacity: isClient ? contentOpacity : 1,
           zIndex: 10,
         }}
       >
         {/* Heading */}
-        <div className="overflow-hidden">
-          <motion.h1
-            initial="hidden"
-            animate={controls}
-            custom={0}
-            variants={headingVariants}
-            className="text-[8vw] sm:text-center sm:text-[6vw] md:text-[4vw] font-bold leading-tight flex flex-wrap items-center gap-2"
-          >
-            An Immersive,
-            <span className="hidden md:inline-block w-[8vw] sm:w-[6vw] md:w-[4vw] lg:w-[4vw]">
-              <img
-                className="w-full h-auto"
-                src="/image/aboutPage/1_3.png"
-                alt="homeImage"
-                width={100}
-                height={100}
-                loading="eager"
-              />
-            </span>
-            Interactive Geolocation-Based
-          </motion.h1>
-        </div>
-
-        <div className="overflow-hidden">
-          <motion.h1
-            initial="hidden"
-            animate={controls}
-            custom={1}
-            variants={headingVariants}
-            className="text-[6vw] sm:text-[4.5vw] md:text-[3vw] text-blue-950 font-semibold my-4 leading-tight"
-          >
-            Hyper Social Media Platform...
-          </motion.h1>
-        </div>
-
-        {/* Download Button */}
-        <motion.div
-          className="flex mt-[1vw] flex-wrap gap-4 justify-center"
+        <motion.p
+          variants={headingVariants}
           initial="hidden"
           animate="visible"
-          variants={buttonContainerVariants}
+          className="text-[6vw] flex items-center  font-semibold leading-tight font-poppins"
         >
-          <a href={HREF} target="_blank" rel="noopener noreferrer">
-            <motion.div variants={buttonItemVariants}>
-              <button className="flex hover:opacity-90 items-center bg-blue-950 text-white px-4 py-2 sm:px-6 sm:py-4 rounded-2xl gap-2 sm:gap-3">
-                <span className="text-base sm:text-xl font-semibold">
-                  Download Now
-                </span>
-              </button>
-            </motion.div>
-          </a>
-        </motion.div>
+          Just Have D V
+          <span>
+            <img
+              className="mx-8 w-24 h-24"
+              src="/image/aboutPage/1_3.png"
+              alt="image"
+            />
+          </span>{" "}
+          , It
+        </motion.p>
+        <motion.p
+          variants={headingVariants}
+          initial="hidden"
+          animate="visible"
+          custom={2}
+          className="text-[6vw] font-semibold leading-tight font-fredroka"
+        >
+          Defines Your Vision
+        </motion.p>
 
         {/* Subheading */}
         <motion.p
@@ -176,13 +145,33 @@ const Homepage = () => {
             hidden: { opacity: 0 },
             visible: {
               opacity: 0.5,
-              transition: { delay: 1.6, duration: 0.8 },
+              transition: { delay: 0.8, duration: 0.8 },
             },
           }}
           className="mt-11 text-[4vw] sm:text-[2.5vw] md:text-[1.5vw]"
         >
-          Discover in a new way, Instead of Generic <br /> ones...
+          A Hyper Social Media - where
+          <br /> content to connections, <br />
+          everything is just how you like it.
         </motion.p>
+
+        {/* Download Button */}
+        <motion.div
+          className="flex mt-[1vw] flex-wrap gap-4 justify-center"
+          initial="hidden"
+          animate="visible"
+          variants={buttonContainerVariants}
+        >
+          <a href={HREF} target="_blank" rel="noopener noreferrer">
+            <motion.div className="mt-[3vw]" variants={buttonItemVariants}>
+              <button className="flex hover:opacity-90 items-center bg-blue-950 text-white px-4 py-2 sm:px-6 sm:py-4 rounded-2xl gap-2 sm:gap-3">
+                <span className="text-base sm:text-xl font-semibold">
+                  Download Now
+                </span>
+              </button>
+            </motion.div>
+          </a>
+        </motion.div>
 
         {/* Scroll Down Icon */}
         <motion.div

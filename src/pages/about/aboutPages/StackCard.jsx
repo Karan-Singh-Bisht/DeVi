@@ -47,8 +47,11 @@ const StackCard = () => {
         markers: false,
         onUpdate: (self) => {
           const scrollY = self.scroll();
+          {
+            console.log(scrollY);
+          }
           let newIndex = null;
-          const breakingPoints = [12300, 12500, 12700, 12900, 13200];
+          const breakingPoints = [12500, 12600, 12700, 12900, 13200];
           breakingPoints.forEach((point, index) => {
             if (scrollY >= point) {
               newIndex = index;
@@ -77,11 +80,11 @@ const StackCard = () => {
   return (
     <div
       ref={containerRef}
-      className="w-full h-[100vh] md:h-[200vh] bg-gray-100 py-[6vw] flex justify-center"
+      className="w-full h-[100vh] md:h-[200vh] py-[3vw] flex justify-center"
     >
       <div
         ref={blackCardRef}
-        className="blackCard bg-black w-[80%] p-10 flex h-[50vw] md:h-[40vw] gap-10 rounded-3xl relative"
+        className="blackCard bg-black w-[85%] p-5 flex h-[50vw] md:h-[40vw] gap-10 rounded-3xl relative"
       >
         {/* Left Scrolling Section (Images) */}
         <div className="relative overflow-hidden w-[50%] h-full">
@@ -114,11 +117,11 @@ const StackCard = () => {
             </h1>
             <ul className="text-[2vw] md:text-[1.2vw] text-gray-500 mt-6 space-y-3">
               {[
-                "Pay Home Bills",
-                "Book Home Services",
-                "Take Home Rewards",
-                "Check Online Records",
-                "Enjoy",
+                "Curated Chaos",
+                "MultiVerses of Creators",
+                "Community Connections",
+                "Vernacular Vibes",
+                "Be The Buzz Maker",
               ].map((text, index) => (
                 <li
                   key={index}

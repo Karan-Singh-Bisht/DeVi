@@ -43,7 +43,7 @@ const HorizontalScrollCarousel = () => {
               src="/image/aboutPage/1_1.png"
               alt="Profile"
             />
-            <h1 className="text-3xl sm:text-4xl font-medium mt-3">Why DeVi</h1>
+            <h1 className="text-3xl sm:text-4xl font-medium mt-3">Why DV</h1>
             <p className="font-semibold text-base sm:text-lg tracking-wide mt-1">
               is your best social media
             </p>
@@ -72,7 +72,7 @@ const HorizontalScrollCarousel = () => {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4vw] font-medium mt-4">
                 Why
                 <br />
-                DeVi
+                DV
               </h1>
               <p className="font-semibold text-base sm:text-lg md:text-xl tracking-wide mt-2">
                 is your best social media
@@ -118,7 +118,7 @@ const Card = ({ card, isMobile }) => {
             className="h-full w-full bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${card.url})`,
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "center bottom",
             }}
           ></div>
@@ -130,24 +130,24 @@ const Card = ({ card, isMobile }) => {
             style={{
               backgroundImage: `url(${card.url})`,
               backgroundSize: "50%",
-              backgroundPosition: "right center",
+              backgroundPosition: "right bottom",
               backgroundRepeat: "no-repeat",
             }}
             className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
           ></div>
           <div className="absolute z-10 flex flex-col bottom-6 sm:bottom-8 md:bottom-10">
             <h1
-              className="bg-gradient-to-br from-white/20 to-white/0 px-4 sm:px-6 md:px-8 
+              className="font-poppins from-white/20 to-white/0 px-4 sm:px-6 md:px-8 
                     text-xl sm:text-2xl md:text-3xl lg:text-[2.5vw] 
-                    font-black uppercase text-black leading-tight md:leading-none"
+                    font-semibold text-black leading-tight md:leading-none"
             >
               {card.title}
             </h1>
             <p
-              className="bg-gradient-to-br from-white/20 to-white/0 
+              className="bg-gradient-to-br tracking-wider font-openSans from-white/20 to-white/0 
                   p-4 sm:p-6 md:p-8 
                   text-xs sm:text-sm md:text-base lg:text-[1vw] 
-                  font-black text-gray-500"
+                  font-semibold text-gray-500"
             >
               {card.para}
             </p>
@@ -162,7 +162,7 @@ export default HorizontalScrollCarousel;
 
 const cards = [
   {
-    url: "/image/aboutPage/9_1.png",
+    url: "/image/aboutPage/GirlLeftSide.png",
     title: (
       <>
         One Platform for
@@ -175,36 +175,68 @@ const cards = [
     bgColor: "#F3F3F5",
   },
   {
-    url: "/image/aboutPage/9_2.png",
+    url: "/image/aboutPage/GirlTeeth.png",
     title: (
       <>
-        An Immersive, <br />
-        Interactive
+        Less Noise, More <br />
+        Relevance
       </>
     ),
-    para: "Discover in new way, Instead of Generic ones",
+    para: (
+      <>
+        No random feeds - just content
+        <br /> that truly matters to you
+      </>
+    ),
     id: 2,
     bgColor: "#F5EEFF",
   },
   {
-    url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
-    para: "Discover in new way, Instead of Generic ones",
+    url: "/image/aboutPage/GirlOpenMouth.png",
+    title: (
+      <>
+        Effortless <br /> Socializing
+      </>
+    ),
+    para: (
+      <>
+        Find & interact with people who <br />
+        match your vibe, effortlessly
+      </>
+    ),
     id: 3,
-    bgColor: "#F5EEFF",
+    bgColor: "#FFF5E0",
   },
   {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
-    para: "Discover in new way, Instead of Generic ones",
+    url: "/image/aboutPage/GirlTOngue.png",
+    title: (
+      <>
+        Mapo Spots <br /> & Events
+      </>
+    ),
+    para: (
+      <>
+        Find trendings, real-time hotspots,
+        <br /> and the right people around you.
+      </>
+    ),
     id: 4,
-    bgColor: "#F5EEFF",
+    bgColor: "#FFE8E0",
   },
   {
-    url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
-    para: "Discover in new way, Instead of Generic ones",
+    url: "/image/aboutPage/GirlRight.png",
+    title: (
+      <>
+        Verfied Profiles <br />& Secure Space
+      </>
+    ),
+    para: (
+      <>
+        Your personal chat space - private, <br />
+        purposeful, and protected.
+      </>
+    ),
     id: 5,
-    bgColor: "#F5EEFF",
+    bgColor: "#FFD4E0",
   },
 ];

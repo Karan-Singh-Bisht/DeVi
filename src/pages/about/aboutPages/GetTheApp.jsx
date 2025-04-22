@@ -68,28 +68,28 @@ const GetTheApp = () => {
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="border bg-[#F2F2F4] p-6 md:px-6 md:pt-6 md:pb-0 rounded-3xl shadow-2xl shadow-gray-800/50 flex flex-col md:flex-row items-center w-full md:w-[50vw] md:h-[30vw] text-center md:text-left"
+      className="border bg-[#F2F2F4] p-6 md:px-6 md:pt-6 md:pb-0 rounded-3xl shadow-2xl shadow-gray-800/50 flex flex-col items-center md:flex-row w-full md:w-[80vw] md:h-[40vw] text-center md:text-left"
     >
-      <div className="w-full flex flex-col items-center pl-[1vw] gap-4">
-        <h2 className="text-xl sm:text-2xl md:text-[4vw] font-extrabold text-[#1E2A4A]">
-          Get The App
+      <div className="w-full flex flex-col items-center h-[23vw] justify-evenly pl-[1vw] p-2">
+        <h2 className="text-xl sm:text-2xl md:text-[6vw] md:font-bold text-[#1E2A4A]">
+          Get <span className="text-gray-400"> The App</span>
         </h2>
-        <p className="text-gray-500 md:text-xl mt-2 text-sm sm:text-base">
-          Our vision is to revolutionize the way...
+        <p className="text-gray-500 md:text-2xl font-mono mt-2 text-sm sm:text-base">
+          And Step Into a New Era of Social Connection...
         </p>
-        <div className="mt-4 flex relative flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-          <button className="bg-[#1E2A4A] md:text-2xl flex items-center justify-center gap-2 font-bold text-white md:px-6 md:py-4 rounded-xl w-full sm:w-auto">
+        <div className="flex relative flex-col gap-4 sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+          <button className="bg-[#1E2A4A] md:text-3xl flex items-center justify-center gap-2 font-bold text-white md:px-8 md:py-6 rounded-xl w-full sm:w-auto">
             App Store
             <img
-              width="25"
+              width="32"
               src="/image/aboutPage/1_4.png"
               alt="App Store Icon"
             />
           </button>
-          <button className="bg-[#1E2A4A] md:text-2xl flex items-center justify-center gap-2 font-bold text-white md:px-6 md:py-4 rounded-xl w-full sm:w-auto">
+          <button className="bg-[#1E2A4A] md:text-3xl flex items-center justify-center gap-2 font-bold text-white md:px-8 md:py-6 rounded-xl w-full sm:w-auto">
             Download
             <img
-              width="25"
+              width="32"
               src="/image/aboutPage/1_3.png"
               alt="Download Icon"
             />
@@ -97,7 +97,7 @@ const GetTheApp = () => {
         </div>
       </div>
       <img
-        src="/image/aboutPage/7_1.png"
+        src="/image/aboutPage/GirlImage.png"
         alt="Character"
         className="w-[50%] sm:w-[40%] md:w-[40%] h-full object-cover mt-4 md:mt-0"
       />
@@ -105,7 +105,7 @@ const GetTheApp = () => {
   );
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-[#CECECE] px-4 relative">
+    <div className="w-full h-screen flex flex-col items-center justify-center px-4 relative">
       {/* Conditionally render based on screen size */}
       {isMobile ? <MobileComponent /> : <DesktopComponent />}
     </div>

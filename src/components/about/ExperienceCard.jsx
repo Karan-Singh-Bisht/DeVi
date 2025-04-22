@@ -40,7 +40,7 @@ const ExperienceCard = ({ bgColor, image, title, para }) => {
         }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl mb-2 font-bold">{title}</h2>
+        <h2 className="text-2xl font-openSans mb-2 font-bold">{title}</h2>
         <p className="px-[10vw] md:px-[0vw] text-xl tracking-wider">{para}</p>
       </motion.div>
     </div>

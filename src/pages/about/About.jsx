@@ -3,6 +3,7 @@ import Homepage from "./aboutPages/Homepage";
 import SecondPage from "./aboutPages/SecondPage";
 import Service from "./aboutPages/Service";
 import { useLocation } from "react-router";
+import Footer from "../../components/about/Footer";
 
 // Lazy-loaded components
 const ResponsiveHorizontalComponent = React.lazy(() =>
@@ -46,11 +47,12 @@ const About = () => {
         <StackCard />
         <Testimonials />
         <Awards />
-        <JoinTheTeam2 />
         <Questions />
+        <JoinTheTeam2 />
         <div ref={contactRef} id="contact">
           <Knowledge />
         </div>
+        <Footer />
       </Suspense>
     </div>
   );

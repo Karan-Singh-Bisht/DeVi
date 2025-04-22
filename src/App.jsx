@@ -13,10 +13,10 @@ const App = () => {
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Home />} /> {/* No lazy loading here */}
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/terms&conditions" element={<TermsAndConditions />} />
-          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/privacyPolicy" element={<Privacy />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </Suspense>

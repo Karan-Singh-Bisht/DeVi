@@ -27,7 +27,7 @@ const Footer = () => {
           <FaPen size={14} /> Blog
         </a>
         <p
-          onClick={() => navigate("/privacy")}
+          onClick={() => navigate("/privacyPolicy")}
           className="flex items-center gap-1 hover:cursor-pointer hover:text-blue-600 transition"
         >
           <FaLock size={14} /> Privacy Policy
