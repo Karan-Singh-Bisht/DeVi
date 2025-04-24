@@ -7,11 +7,11 @@ import ResponsiveCardStack from "../../../components/about/ResponsiveCardStack";
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  { url: "/image/aboutPage/8_1.png", bgColor: "from-purple-500 to-pink-500" },
-  { url: "/image/aboutPage/8_2.png", bgColor: "from-green-500 to-blue-500" },
-  { url: "/image/aboutPage/8_3.png", bgColor: "from-yellow-500 to-orange-500" },
-  { url: "/image/aboutPage/8_4.png", bgColor: "from-yellow-500 to-orange-500" },
-  { url: "/image/aboutPage/9_1.png", bgColor: "from-yellow-500 to-orange-500" },
+  { url: "/image/aboutPage/8_1.png", bgColor: "#1C274C" },
+  { url: "/image/aboutPage/8_2.png", bgColor: "" },
+  { url: "/image/aboutPage/8_3.png", bgColor: "" },
+  { url: "/image/aboutPage/8_4.png", bgColor: "" },
+  { url: "/image/aboutPage/9_1.png", bgColor: "" },
 ];
 
 const StackCard = () => {
@@ -87,7 +87,7 @@ const StackCard = () => {
         className="blackCard bg-black w-[85%] p-5 flex h-[50vw] md:h-[40vw] gap-10 rounded-3xl relative"
       >
         {/* Left Scrolling Section (Images) */}
-        <div className="relative overflow-hidden w-[50%] h-full">
+        <div className="relative overflow-hidden w-[50%] pl-24 h-full">
           <div
             ref={imageWrapperRef}
             className="flex flex-col absolute gap-10"
@@ -97,7 +97,7 @@ const StackCard = () => {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className={`bg-gradient-to-r ${image.bgColor} h-[29vw] w-[27vw] rounded-3xl shadow-lg transition-transform`}
+                className={`bg-white h-[29vw] w-[27vw] rounded-3xl shadow-lg transition-transform`}
               >
                 <img
                   src={image.url}
@@ -110,10 +110,13 @@ const StackCard = () => {
         </div>
 
         {/* Right Fixed Section (Text) */}
-        <div className="md:w-[50%] flex items-start">
+        <div className="md:w-[50%] flex flex-col items-start justify-center">
           <div>
-            <h1 className="md:text-[4vw] text-[3vw] text-white font-extrabold tracking-wide">
-              Always One <br /> Step Ahead
+            <h1 className="md:text-[4vw] font-poppins text-[3vw] text-white font-extrabold tracking-wide">
+              <span className="text-[#8D93A5]">
+                Always One <br /> Step
+              </span>{" "}
+              <span className="">Ahead</span>
             </h1>
             <ul className="text-[2vw] md:text-[1.2vw] text-gray-500 mt-6 space-y-3">
               {[

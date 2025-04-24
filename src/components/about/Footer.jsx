@@ -3,13 +3,17 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#E3E5FC]">
-      <footer className="bg-black text-white py-10 px-6 md:px-20 rounded-x-3xl">
+    <div className="w-full bg-[#E3E5FC] pb-4">
+      <footer className="bg-black rounded-3xl w-[99%] mx-auto text-white py-10 px-6 md:px-20 md:py-20">
         <div className="flex flex-col md:flex-row justify-between items-start gap-10">
           <div className="flex flex-col gap-6">
-            <h1 className="text-4xl font-bold text-[#dcdcff] tracking-wide">
-              DV
-            </h1>
+            <Link to={"/"}>
+              <img
+                src="/image/homePage/DVWhiteLogo.png"
+                alt="Logo Image"
+                className="h-32 w-32 text-white "
+              />
+            </Link>
             <div className="flex gap-4">
               <div className="flex gap-4">
                 <a
@@ -47,11 +51,11 @@ const Footer = () => {
             <a target="_blank" href="https://careers.harsar.in">
               Careers
             </a>
-            <a target="_blank" href="/terms&conditions">
-              Terms & Conditions
-            </a>
             <a target="_blank" href="privacyPolicy">
               Privacy Policy
+            </a>
+            <a target="_blank" href="/terms&conditions">
+              Terms & Conditions
             </a>
           </div>
 
@@ -64,7 +68,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <h2 className="text-xl font-semibold">Help & Support</h2>
             <a href="about#contact">Contact Us</a>
-            <a href="#">FAQs</a>
+            <a href="/about#FAQs">FAQs</a>
           </div>
         </div>
 

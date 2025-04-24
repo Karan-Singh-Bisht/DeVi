@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { FaGooglePlay } from "react-icons/fa";
 import { GrAppleAppStore } from "react-icons/gr";
 import Feature from "./Feature";
+import { useNavigate } from "react-router";
 
 const BottomCard = () => {
   const mobileRef = useRef();
@@ -32,13 +33,13 @@ const BottomCard = () => {
   return (
     <>
       <div className="bg-[#E1C5FE] flex items-center h-[300vw] md:h-screen justify-center w-full px-4 sm:px-6 py-10">
-        <motion.div className="flex flex-col md:flex-row justify-center items-center md:gap-[5vw] max-w-7xl">
+        <motion.div className="flex flex-col md:flex-row justify-center items-center md:gap-[8vw] max-w-7xl">
           {/* Mobile App Mockup */}
           <div ref={mobileRef} className="w-full sm:w-[50%] md:w-[20vw]">
             <img
-              src="/image/aboutPage/5_1.png"
+              src="https://cdn.discordapp.com/attachments/1089583827162235013/1364906109223043082/card.png?ex=680b5f5f&is=680a0ddf&hm=eab92e0afc719e20ee8c692705122a60422a70067a6d19e6806ba5163fe5273f&"
               alt="App Mockup"
-              className="w-full h-auto md:h-[38vw] rounded-xl"
+              className="w-full h-auto md:h-[40vw]"
             />
           </div>
 
@@ -47,7 +48,7 @@ const BottomCard = () => {
             initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: -50, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-center md:text-left flex flex-col w-full gap-10 md:w-[60%]"
+            className="text-center md:text-left flex flex-col w-full gap-24 md:w-[60%]"
           >
             <h2 className="text-2xl font-openSans sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 leading-loose">
               One app. Two lives, Switch between <br /> your buddy life and
@@ -59,12 +60,22 @@ const BottomCard = () => {
 
             {/* Navigation Buttons */}
             <div className="flex justify-center md:justify-start gap-6 mt-5">
-              <button className="w-[12vw] md:w-[8vw] lg:w-[4vw] h-[12vw] md:h-[8vw] lg:h-[4vw] rounded-full bg-white shadow-md flex items-center justify-center">
-                <FaGooglePlay className="w-[6vw] md:w-[4vw] lg:w-[2vw] h-[6vw] md:h-[4vw] lg:h-[2vw]" />
-              </button>
-              <button className="w-[12vw] md:w-[8vw] lg:w-[4vw] h-[12vw] md:h-[8vw] lg:h-[4vw] rounded-full bg-white shadow-md flex items-center justify-center">
-                <GrAppleAppStore className="w-[6vw] md:w-[4vw] lg:w-[2vw] h-[6vw] md:h-[4vw] lg:h-[2vw]" />
-              </button>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.harsar.devi"
+                target="_blank"
+              >
+                <button className="w-[12vw] md:w-[8vw] lg:w-[4vw] h-[12vw] md:h-[8vw] lg:h-[4vw] rounded-full bg-white shadow-md flex items-center justify-center">
+                  <FaGooglePlay className="w-[6vw] md:w-[4vw] lg:w-[2vw] h-[6vw] md:h-[4vw] lg:h-[2vw]" />
+                </button>
+              </a>
+              <a
+                href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947"
+                target="_blank"
+              >
+                <button className="w-[12vw] md:w-[8vw] lg:w-[4vw] h-[12vw] md:h-[8vw] lg:h-[4vw] rounded-full bg-white shadow-md flex items-center justify-center">
+                  <GrAppleAppStore className="w-[6vw] md:w-[4vw] lg:w-[2vw] h-[6vw] md:h-[4vw] lg:h-[2vw]" />
+                </button>
+              </a>
             </div>
           </motion.div>
         </motion.div>

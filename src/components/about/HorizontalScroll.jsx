@@ -54,7 +54,8 @@ const Card = ({ card }) => {
       <div className="absolute inset-0 z-10 flex items-center justify-center gap-4">
         <p className="text p-8 text-[30vw] md:text-[14vw] font-black text-[#1D284D] flex items-center">
           {/* <span className="text-[#828282]">Just</span>&nbsp; */}
-          <span className="hover:text-[#828282]">Explore,</span>&nbsp;
+          <span className="hover:text-[#828282] font-madimiOne">Explore,</span>
+          &nbsp;
           {/* Circle Image */}
           <span className="md:w-[12vw] md:h-[10vw] h-[20vw] w-[20vw] rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg">
             <img
@@ -63,10 +64,15 @@ const Card = ({ card }) => {
               className="md:w-full md:h-full w-[20vw] h-[20vw] object-cover rounded-full"
             />
           </span>
-          &nbsp;<span className="hover:text-[#828282]">Enrich,</span>
-          &nbsp;<span className="hover:text-[#828282]">Experience</span>
-          &nbsp;<span className="hover:text-[#828282]">&</span>
-          &nbsp;<span className="hover:text-[#828282]">Embrace</span>
+          &nbsp;
+          <span className="hover:text-[#828282] font-madimiOne">Enrich,</span>
+          &nbsp;
+          <span className="hover:text-[#828282] font-madimiOne">
+            Experience
+          </span>
+          &nbsp;<span className="hover:text-[#828282] font-madimiOne">&</span>
+          &nbsp;
+          <span className="hover:text-[#828282] font-madimiOne">Embrace</span>
           {/* &nbsp;<span className="hover:text-[#828282]">it</span> */}
         </p>
       </div>

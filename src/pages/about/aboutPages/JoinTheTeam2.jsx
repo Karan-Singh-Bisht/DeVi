@@ -130,8 +130,8 @@ export default function JoinTheTeam2() {
 
                     {/* Your caption and button */}
                     <div className="absolute bottom-10 flex flex-col items-center">
-                      <h1 className="text-[2vw] font-openSans font-bold text-white">
-                        Join the DV team
+                      <h1 className="text-[3vw] font-openSans font-bold text-white">
+                        Join the DV Team
                       </h1>
                       <motion.div
                         className="mt-[4vw] flex flex-wrap gap-4 justify-center"
@@ -141,12 +141,12 @@ export default function JoinTheTeam2() {
                       >
                         <a href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947">
                           <motion.div variants={buttonItemVariants}>
-                            <button className="flex items-center bg-white text-white px-4 py-2 sm:px-8 sm:py-2 rounded-2xl gap-2 sm:gap-3">
-                              <img
-                                src="/image/aboutPage/HandShake.png"
-                                alt="Handshake"
-                                className="w-8 h-8 sm:w-10 sm:h-10 rounded-md"
-                              />
+                            <button className="flex hover:opacity-90 items-center bg-blue-950 text-white px-4 py-2 sm:px-6 sm:py-4 md:px-16 rounded-2xl gap-2 sm:gap-3">
+                              <span className="text-base sm:text-xl font-semibold">
+                                <h1 className="font-openSans font-semibold">
+                                  Apply Now
+                                </h1>
+                              </span>
                             </button>
                           </motion.div>
                         </a>

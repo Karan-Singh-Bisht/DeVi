@@ -4,7 +4,7 @@ import Video from "../../../components/about/Video";
 
 const SecondPage = () => {
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center relative bg-blue-100 overflow-hidden px-4">
+    <div className="w-full h-screen flex flex-col items-center justify-center relative bg-white overflow-hidden px-4">
       <div className="flex flex-col items-center justify-center relative w-full">
         {/* Expanding Background Circle */}
         <motion.div

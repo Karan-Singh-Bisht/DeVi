@@ -18,9 +18,9 @@ const Navbar = ({ color }) => {
       </button>
 
       {/* Center Logo: Positioned Dynamically */}
-      <div className="flex items-center gap-1 absolute left-1/2 transform -translate-x-1/2">
+      <div className="flex items-center mt-5 absolute left-1/2 transform -translate-x-1/2">
         <img
-          src="./image/aboutPage/1_2.png"
+          src="./image/homePage/Logo.png"
           alt="Company Name"
           className="w-[22vw] sm:w-[7vw] md:w-[6vw] h-[14vw] sm:h-[5vw] md:h-[4vw]"
         />

@@ -65,16 +65,16 @@ const HorizontalScrollCarousel = () => {
             {/* Header Card */}
             <div className="bg-white min-w-[280px] sm:min-w-[320px] md:min-w-[360px] lg:w-[30vw] px-6 py-6 sm:px-8 md:px-10 lg:px-[6vw] lg:py-[4vw] tracking-tighter">
               <img
-                className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[4vw] lg:h-[4vw]"
-                src="/image/aboutPage/1_1.png"
+                className="rounded-full bg-gray-200 w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[6vw] lg:h-[6vw]"
+                src="/image/aboutPage/GirlRightImage.png"
                 alt="Profile"
               />
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4vw] font-medium mt-4">
+              <h1 className="text-3xl sm:text-4xl font-poppins md:text-5xl lg:text-[4vw] font-bold mt-4">
                 Why
                 <br />
                 DV
               </h1>
-              <p className="font-semibold text-base sm:text-lg md:text-xl tracking-wide mt-2">
+              <p className="font-base text-base sm:text-lg md:text-xl tracking-wide mt-2 font-openSans">
                 is your best social media
               </p>
             </div>
@@ -135,6 +135,7 @@ const Card = ({ card, isMobile }) => {
             }}
             className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
           ></div>
+          <p className="absolute top-10 font-openSans left-10">{card.id}</p>
           <div className="absolute z-10 flex flex-col bottom-6 sm:bottom-8 md:bottom-10">
             <h1
               className="font-poppins from-white/20 to-white/0 px-4 sm:px-6 md:px-8 

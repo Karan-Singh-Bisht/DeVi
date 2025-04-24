@@ -36,7 +36,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="text-center pb-10 w-full min-h-screen flex flex-col justify-center p-[5vw] sm:p-[4vw] md:p-[3vw] bg-[#EAF1F4]">
+    <section className="text-center pb-10 w-full min-h-screen flex flex-col justify-center p-[5vw] sm:p-[4vw] md:p-[3vw]">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}

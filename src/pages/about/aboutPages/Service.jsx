@@ -112,7 +112,7 @@ const Service = () => {
                   alt={features[0].title}
                   className="md:w-auto w-full max-w-full h-auto max-h-full object-contain"
                 />
-                <h3 className="text-2xl absolute bottom-2 left-4 text-black font-bold z-20">
+                <h3 className="text-2xl absolute bottom-2 left-4 text-black font-openSans font-semibold z-20">
                   {features[0].title}
                 </h3>
               </div>
@@ -133,7 +133,7 @@ const Service = () => {
                   alt={features[1].title}
                   className="w-auto max-w-full h-auto max-h-[100%] object-cover"
                 />
-                <h3 className="text-2xl absolute bottom-2 left-4 text-black font-bold z-20">
+                <h3 className="text-2xl absolute bottom-2 left-4 text-black font-openSans font-semibold z-20">
                   {features[1].title}
                 </h3>
               </div>
@@ -163,13 +163,15 @@ const Service = () => {
 
                 {/* Text Overlay */}
                 <div className="absolute w-[60%] bottom-4 left-4 z-20">
-                  <h3
+                  <p
                     className={`text-2xl ${
                       features[2].textColor || "text-black"
                     } font-semibold`}
                   >
-                    <span className="font-bold">{features[2].title}</span>
-                  </h3>
+                    <span className="font-openSans font-semibold">
+                      {features[2].title}
+                    </span>
+                  </p>
                 </div>
               </div>
 
@@ -183,7 +185,9 @@ const Service = () => {
               >
                 {/* Text on the left */}
                 <div className="z-20 w-[50%] absolute bottom-4 left-4">
-                  <h3 className="text-2xl font-bold">{features[3].title}</h3>
+                  <h3 className="text-2xl font-openSans font-semibold">
+                    {features[3].title}
+                  </h3>
                 </div>
 
                 {/* Image on the right */}
@@ -227,7 +231,7 @@ const Service = () => {
                   />
 
                   {/* Title Text */}
-                  <h3 className="text-xl font-semibold absolute bottom-2 left-4 z-20">
+                  <h3 className="text-xl font-openSans font-semibold absolute bottom-2 left-4 z-20">
                     {features[5].title}
                   </h3>
                 </div>
@@ -253,7 +257,7 @@ const Service = () => {
                   />
 
                   {/* Title Text */}
-                  <h3 className="text-lg absolute bottom-4 left-4 font-semibold z-20">
+                  <h3 className="text-2xl absolute bottom-4 left-4 font-openSans font-semibold z-20">
                     {features[6].title}
                   </h3>
                 </div>
@@ -276,7 +280,7 @@ const Service = () => {
                   style={{ backgroundColor: features[4].backgroundColor }}
                 >
                   {/* Title Text */}
-                  <h3 className="text-lg md:text-xl font-bold absolute bottom-3 left-4 md:left-6 text-center md:text-left z-20">
+                  <h3 className="text-lg md:text-2xl font-openSans font-semibold absolute bottom-3 left-4 md:left-6 text-center md:text-left z-20">
                     {features[4].title}
                   </h3>
                   {/* Responsive Image */}

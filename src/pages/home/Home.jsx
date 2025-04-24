@@ -105,15 +105,15 @@ const Home = () => {
 
           <div className="flex flex-col gap-4 items-center">
             <img
-              src="/image/homePage/1_3.png"
+              src="/image/homePage/Logo.png"
               className="object-cover w-[40vw] sm:w-[28vw] md:w-[18vw] lg:w-[12vw]"
               alt=""
             />
-            <img
+            {/* <img
               src="/image/homePage/1_4.png"
               className="object-cover w-[40vw] sm:w-[28vw] md:w-[18vw] lg:w-[12vw]"
               alt=""
-            />
+            /> */}
 
             <div className="text-center mt-4">
               <button

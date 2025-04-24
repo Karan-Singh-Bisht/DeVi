@@ -4,6 +4,7 @@ import SecondPage from "./aboutPages/SecondPage";
 import Service from "./aboutPages/Service";
 import { useLocation } from "react-router";
 import Footer from "../../components/about/Footer";
+import Contact from "./aboutPages/Contact";
 
 // Lazy-loaded components
 const ResponsiveHorizontalComponent = React.lazy(() =>
@@ -19,16 +20,19 @@ const Testimonials = React.lazy(() => import("./aboutPages/Testimonials"));
 const Awards = React.lazy(() => import("./aboutPages/Awards"));
 const JoinTheTeam2 = React.lazy(() => import("./aboutPages/JoinTheTeam2"));
 const Questions = React.lazy(() => import("./aboutPages/Questions"));
-const Knowledge = React.lazy(() => import("./aboutPages/Knowledge"));
 const BottomCard = React.lazy(() => import("./aboutPages/BottomCard"));
 
 const About = () => {
   const location = useLocation();
   const contactRef = useRef(null);
+  const FAQRef = useRef(null);
 
   useEffect(() => {
     if (location.hash === "#contact" && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#FAQ" && FAQRef.current) {
+      FAQRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 
@@ -47,10 +51,12 @@ const About = () => {
         <StackCard />
         <Testimonials />
         <Awards />
-        <Questions />
+        <div ref={FAQRef} id="FAQs">
+          <Questions />
+        </div>
         <JoinTheTeam2 />
         <div ref={contactRef} id="contact">
-          <Knowledge />
+          <Contact />
         </div>
         <Footer />
       </Suspense>

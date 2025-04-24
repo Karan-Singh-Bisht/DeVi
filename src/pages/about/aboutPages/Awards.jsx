@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
+import JoinButton from "../../../components/about/JoinButton";
 
 const Awards = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-100 min-h-screen px-4 sm:px-6 md:px-8">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8">
       <motion.div
-        className="w-full flex gap-5 flex-col items-center justify-center bg-gray-100 min-h-screen p-4 sm:p-6 md:p-8"
+        className="w-full flex gap-5 flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-8"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-[6vw] sm:text-[4vw] md:text-[3vw] font-bold text-gray-900 text-center">
+        <h2 className="text-[6vw] sm:text-[4vw] md:text-[3vw] font-poppins font-bold text-gray-900 text-center">
           Bulletin Board
         </h2>
-        <p className="text-gray-500 my-2 text-center">
+        <p className="text-gray-500 text-xl font-semibold font-openSans my-2 text-center">
           News & Awards & Milestones
         </p>
 
@@ -35,7 +36,7 @@ const Awards = () => {
           />
         </div>
 
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mt-8 mb-[1vw] text-center">
+        <h3 className="text-2xl sm:text-xl font-openSans font-semibold text-gray-500 mt-8 mb-[1vw] text-center">
           Partners & Supporters
         </h3>
         <div className="flex flex-wrap justify-center items-center gap-6 mt-4 w-full mb-[2vw]">
@@ -61,9 +62,7 @@ const Awards = () => {
           />
         </div>
 
-        <button className="bg-blue-800 text-white px-6 py-2 rounded-md mt-6 hover:bg-blue-700 text-sm sm:text-base">
-          Join With Us
-        </button>
+        <JoinButton title={"Join With Us"}></JoinButton>
       </motion.div>
     </div>
   );

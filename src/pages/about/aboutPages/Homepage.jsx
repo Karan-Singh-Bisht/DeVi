@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Navbar from "../../../components/about/Navbar";
-import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
 import { GoArrowDown } from "react-icons/go";
 
 const Homepage = () => {
@@ -8,13 +14,24 @@ const Homepage = () => {
   const { scrollYProgress } = useScroll();
   const [isClient, setIsClient] = useState(false);
   const [HREF, setHREF] = useState("");
+  const rotatingWords = ["My", "Our", "Your", "Their", "His", "Her", "Every"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(2); // Start from "Your"
 
-  // Platform-specific download link (run in idle time for better perf)
+  // Text rotation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex(
+        (prevIndex) => (prevIndex + 1) % rotatingWords.length
+      );
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Platform-specific download link
   useEffect(() => {
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {
       requestIdleCallback(() => {
         const userAgent = window.navigator.userAgent;
-
         if (
           /iPhone|iPad|iPod/i.test(userAgent) ||
           /Macintosh/i.test(userAgent)
@@ -45,14 +62,13 @@ const Homepage = () => {
     [0, 0.3, 1],
     ["#E4F2FF", "#E4F2FF", "#FFFFFF"]
   );
-
   const contentOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   // Memoized animation variants
   const headingVariants = useMemo(
     () => ({
       hidden: { opacity: 0, y: 50 },
-      visible: (custom) => ({
+      visible: (custom = 1) => ({
         opacity: 1,
         y: 0,
         transition: {
@@ -98,13 +114,13 @@ const Homepage = () => {
   return (
     <motion.div className="flex relative font-roboto gap-4 flex-col h-[160vw] md:h-screen overflow-x-hidden overflow-hidden">
       {/* Navbar */}
-      <div className="w-full ">
+      <div className="w-full">
         <Navbar color={backgroundColor} />
       </div>
 
       {/* Hero Section */}
       <motion.section
-        className="flex flex-col flex-1 items-center justify-start mt-[6vw] bg-white px-6 text-center relative "
+        className="flex flex-col flex-1 items-center justify-start mt-[6vw] bg-white px-6 text-center relative"
         style={{
           opacity: isClient ? contentOpacity : 1,
           zIndex: 10,
@@ -115,7 +131,7 @@ const Homepage = () => {
           variants={headingVariants}
           initial="hidden"
           animate="visible"
-          className="text-[6vw] flex items-center  font-semibold leading-tight font-poppins"
+          className="text-[6vw] flex items-center font-semibold leading-tight font-poppins"
         >
           Just Have D V
           <span>
@@ -127,15 +143,42 @@ const Homepage = () => {
           </span>{" "}
           , It
         </motion.p>
-        <motion.p
-          variants={headingVariants}
-          initial="hidden"
-          animate="visible"
-          custom={2}
-          className="text-[6vw] font-semibold leading-tight font-fredroka"
-        >
-          Defines Your Vision
-        </motion.p>
+
+        {/* Rotating Word */}
+        <div className="flex justify-center gap-5 items-center text-[6vw] font-semibold leading-tight font-fredroka">
+          <motion.span
+            variants={headingVariants}
+            initial="hidden"
+            animate="visible"
+            custom={2}
+          >
+            Defines
+          </motion.span>
+
+          <div className="relative inline-block h-[7vw]">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentWordIndex}
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -40, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="whitespace-nowrap text-[#8D93A5]"
+              >
+                {rotatingWords[currentWordIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </div>
+
+          <motion.span
+            variants={headingVariants}
+            initial="hidden"
+            animate="visible"
+            custom={2}
+          >
+            Vision
+          </motion.span>
+        </div>
 
         {/* Subheading */}
         <motion.p

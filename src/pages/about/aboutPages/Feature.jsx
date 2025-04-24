@@ -18,7 +18,7 @@ const Feature = () => {
   // }, []);
 
   return (
-    <motion.div className="flex justify-center w-full h-screen items-center bg-gray-100 py-10">
+    <motion.div className="flex justify-center w-full h-screen items-center py-10">
       <motion.div
         initial={{ scale: 0.5, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -60,6 +60,7 @@ const Feature = () => {
 const StatCard = ({ image, value, label }) => (
   <div className="flex flex-col items-center md:gap-2">
     <img
+      loading="lazy"
       src={image}
       alt={label}
       className="w-[30vw] h-[30vw] rounded-3xl mb-2 sm:w-32 sm:h-32 md:w-[12vw] md:h-[12vw]"
