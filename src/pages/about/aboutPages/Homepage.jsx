@@ -14,7 +14,7 @@ const Homepage = () => {
   const { scrollYProgress } = useScroll();
   const [isClient, setIsClient] = useState(false);
   const [HREF, setHREF] = useState("");
-  const rotatingWords = ["My", "Our", "Your", "Their", "His", "Her", "Every"];
+  const rotatingWords = ["My", "Our", "Your", "His", "Her", "Their", "Every"];
   const [currentWordIndex, setCurrentWordIndex] = useState(2); // Start from "Your"
 
   // Text rotation effect
@@ -159,10 +159,9 @@ const Homepage = () => {
             <AnimatePresence mode="wait">
               <motion.span
                 key={currentWordIndex}
-                initial={{ y: 40, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -40, opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="whitespace-nowrap text-[#8D93A5]"
               >
                 {rotatingWords[currentWordIndex]}
