@@ -103,9 +103,10 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-16 text-center text-sm text-gray-400">
+        <div className="mt-16 pb-8 text-center text-sm text-gray-400">
           <p>
-            By <span className="font-semibold text-white">HarSar</span>
+            By{" "}
+            <span className="font-semibold font-detoks text-white">HarSar</span>
           </p>
           <p>© 2025 HarSar Infonics. All rights reserved</p>
         </div>

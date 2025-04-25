@@ -8,6 +8,8 @@ module.exports = {
         fredroka: ["Fredoka", "sans-serif"],
         openSans: ["Open Sans", "sans-serif"],
         madimiOne: ["Madimi One", "sans-serif"],
+        detoks: ["detoks", "sans-serif"],
+        pacifico: ["Pacifico", "cursive"],
       },
     },
   },

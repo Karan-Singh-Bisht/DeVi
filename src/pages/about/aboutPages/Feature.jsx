@@ -20,9 +20,9 @@ const Feature = () => {
   return (
     <motion.div className="flex justify-center w-full h-screen items-center py-10">
       <motion.div
-        initial={{ scale: 0.5, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        initial={{ x: 150, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
         className="flex flex-col sm:flex-row space-y-12 sm:space-y-0 sm:space-x-[10vw] px-4 sm:px-10 py-5 rounded-lg"
       >
         {/* Users */}

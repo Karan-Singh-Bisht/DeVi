@@ -10,7 +10,7 @@ const SecondPage = () => {
         <motion.div
           initial={{ scale: 1, opacity: 1 }}
           whileInView={{ scale: 6 }}
-          transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
           className="absolute w-[50vw] h-[50vw] hover:cursor-pointer sm:w-[45vw] sm:h-[45vw] md:w-[35vw] md:h-[35vw] bg-gray-400 rounded-full"
         />
 

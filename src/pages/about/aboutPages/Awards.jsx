@@ -10,8 +10,8 @@ const Awards = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-[6vw] sm:text-[4vw] md:text-[3vw] font-poppins font-bold text-gray-900 text-center">
-          Bulletin Board
+        <h2 className="md:text-[5vw] text-[8vw] text-[#1C274C] font-poppins sm:text-[4vw] text-center font-bold">
+          Bulletin <span className="text-[#8D93A5]">Board</span>
         </h2>
         <p className="text-gray-500 text-xl font-semibold font-openSans my-2 text-center">
           News & Awards & Milestones
@@ -22,6 +22,7 @@ const Awards = () => {
             initial={{ x: -250, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
+            loading="lazy"
             src="/image/aboutPage/12_1.jpeg"
             alt="Award 1"
             className="w-[4rem] sm:w-[5rem] md:w-[6rem] h-auto rounded-md shadow-md"
@@ -31,6 +32,7 @@ const Awards = () => {
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             src="/image/aboutPage/12_2.jpeg"
+            loading="lazy"
             alt="Award 2"
             className="w-[4rem] sm:w-[5rem] md:w-[6rem] h-auto rounded-md shadow-md"
           />

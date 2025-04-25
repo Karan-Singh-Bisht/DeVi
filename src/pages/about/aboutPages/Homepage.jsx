@@ -136,8 +136,8 @@ const Homepage = () => {
           Just Have D V
           <span>
             <img
-              className="mx-8 w-24 h-24"
-              src="/image/aboutPage/1_3.png"
+              className="mx-8 w-44 h-28 rounded-full object-cover"
+              src="/image/aboutPage/Simha.png"
               alt="image"
             />
           </span>{" "}

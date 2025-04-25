@@ -53,9 +53,24 @@ export default function Work() {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="text-3xl md:text-[4vw] font-bold mb-12 md:mb-[10vw] text-center"
+        className="text-3xl md:text-[4vw] flex items-center font-bold mb-12 md:mb-[10vw] text-center"
       >
-        How <span className="text-purple-600">DV</span> Works
+        <span className="md:text-[5vw] text-[8vw] font-bold font-poppins text-[#1C274C]">
+          How{" "}
+        </span>
+        <span>
+          <img
+            className="mx-8 w-44 h-28 rounded-full object-cover"
+            src="/image/aboutPage/Simha.png"
+            alt="image"
+          />
+        </span>{" "}
+        <span className="md:text-[5vw] text-[8vw] font-bold font-poppins text-[#8D93A5]">
+          DV&nbsp;
+        </span>
+        <span className="md:text-[5vw] text-[8vw] font-bold font-poppins text-[#1C274C]">
+          Works
+        </span>
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">

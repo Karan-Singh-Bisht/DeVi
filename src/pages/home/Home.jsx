@@ -109,12 +109,9 @@ const Home = () => {
               className="object-cover w-[40vw] sm:w-[28vw] md:w-[18vw] lg:w-[12vw]"
               alt=""
             />
-            {/* <img
-              src="/image/homePage/1_4.png"
-              className="object-cover w-[40vw] sm:w-[28vw] md:w-[18vw] lg:w-[12vw]"
-              alt=""
-            /> */}
-
+            <h1 className="mt-5 font-semibold font-pacifico text-[2vw]">
+              Defines Vision
+            </h1>
             <div className="text-center mt-4">
               <button
                 onClick={handleVideoClick}

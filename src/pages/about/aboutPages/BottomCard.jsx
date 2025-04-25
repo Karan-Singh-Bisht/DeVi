@@ -32,14 +32,19 @@ const BottomCard = () => {
 
   return (
     <>
-      <div className="bg-[#E1C5FE] flex items-center h-[300vw] md:h-screen justify-center w-full px-4 sm:px-6 py-10">
+      <div className="bg-[#8D93A5] flex items-center h-[300vw] md:h-screen justify-center w-full px-4 sm:px-6 py-10">
         <motion.div className="flex flex-col md:flex-row justify-center items-center md:gap-[8vw] max-w-7xl">
           {/* Mobile App Mockup */}
-          <div ref={mobileRef} className="w-full sm:w-[50%] md:w-[20vw]">
-            <img
-              src="https://cdn.discordapp.com/attachments/1089583827162235013/1364906109223043082/card.png?ex=680b5f5f&is=680a0ddf&hm=eab92e0afc719e20ee8c692705122a60422a70067a6d19e6806ba5163fe5273f&"
-              alt="App Mockup"
-              className="w-full h-auto md:h-[40vw]"
+          <div
+            ref={mobileRef}
+            className="w-full sm:w-[50%] md:w-[20vw] border-[0.7vw] rounded-[2vw] border-white"
+          >
+            <video
+              src="/video/DV-App.mp4"
+              autoPlay
+              loop
+              muted
+              className="w-full h-auto object-cover rounded-3xl"
             />
           </div>
 

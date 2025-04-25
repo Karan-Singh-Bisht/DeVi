@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const faqData = [
   {
@@ -223,11 +224,15 @@ const Questions = () => {
   };
 
   return (
-    <div className="px-4 py-10 max-w-6xl mx-auto bg-white">
-      <h1 className="text-[3vw] font-bold font-poppins mb-8 text-center">
+    <div className="px-4 py-10 max-w-7xl mx-auto bg-white">
+      <motion.h1
+        initial={{ scale: 0.5 }}
+        whileInView={{ scale: 1 }}
+        className="md:text-[5vw] text-[8vw] text-[#1C274C] font-poppins sm:text-[4vw] text-center font-bold mb-8"
+      >
         <span className="text-[#1C274C]">Your Curiosity</span>,
-        <br /> <span className="text-[#8D93A5]">Our Clarity!</span>
-      </h1>
+        <span className="text-[#8D93A5]">Our Clarity!</span>
+      </motion.h1>
 
       {faqData.map((section, index) => (
         <section key={index} className="mb-10">

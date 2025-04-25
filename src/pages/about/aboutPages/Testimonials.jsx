@@ -42,8 +42,8 @@ const Testimonials = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-[10vw] font-poppins sm:text-[4vw] md:text-[3vw] text-center pb-[5vw] font-bold">
-          Fabulous Experience Shared By Our{" "}
+        <h2 className="md:text-[5vw] text-[8vw] text-[#1C274C] font-poppins sm:text-[4vw] text-center pb-[5vw] font-bold">
+          No Cap, Just&nbsp;
           <span className="text-[#8D93A5]">DVian's</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 mt-6">

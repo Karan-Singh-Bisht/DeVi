@@ -19,7 +19,7 @@ const HorizontalScroll = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-65%"]);
 
   return (
-    <section ref={targetRef} className="relative bg-[#E1C5FE] h-[300vh]">
+    <section ref={targetRef} className="relative bg-[#8D93A5] h-[300vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
@@ -52,28 +52,24 @@ const Card = ({ card }) => {
 
       {/* Text & Image Container */}
       <div className="absolute inset-0 z-10 flex items-center justify-center gap-4">
-        <p className="text p-8 text-[30vw] md:text-[14vw] font-black text-[#1D284D] flex items-center">
-          {/* <span className="text-[#828282]">Just</span>&nbsp; */}
-          <span className="hover:text-[#828282] font-madimiOne">Explore,</span>
+        <p className="text p-8 text-[30vw] md:text-[14vw] font-black text-white flex items-center">
+          <span className="font-madimiOne">Explore,</span>
           &nbsp;
           {/* Circle Image */}
           <span className="md:w-[12vw] md:h-[10vw] h-[20vw] w-[20vw] rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg">
             <img
-              src="./image/aboutPage/6_1.jpeg"
+              src="./image/aboutPage/Simha.png"
               alt="Profile"
               className="md:w-full md:h-full w-[20vw] h-[20vw] object-cover rounded-full"
             />
           </span>
           &nbsp;
-          <span className="hover:text-[#828282] font-madimiOne">Enrich,</span>
+          <span className="font-madimiOne">Enrich,</span>
           &nbsp;
-          <span className="hover:text-[#828282] font-madimiOne">
-            Experience
-          </span>
-          &nbsp;<span className="hover:text-[#828282] font-madimiOne">&</span>
+          <span className="font-madimiOne">Experience</span>
+          &nbsp;<span className=" font-madimiOne">&</span>
           &nbsp;
-          <span className="hover:text-[#828282] font-madimiOne">Embrace</span>
-          {/* &nbsp;<span className="hover:text-[#828282]">it</span> */}
+          <span className=" font-madimiOne">Embrace</span>
         </p>
       </div>
     </motion.div>

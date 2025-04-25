@@ -82,15 +82,15 @@ const Service = () => {
         {...fadeInUpAnimation}
         className="text-center flex flex-col md:my-5"
       >
-        <h1 className="md:text-[4vw] text-[8vw] font-bold font-poppins text-[#1C274C]">
+        <h1 className="md:text-[5vw] text-[8vw] font-bold font-poppins text-[#1C274C]">
           Magical Social <span className="text-[#8D93A5]">Superpowers</span>
         </h1>
-        <p className="font-openSans font-semibold text-[2vw]">
+        <p className="font-openSans font-semibold text-gray-500 text-[1.5vw]">
           Everything You Need, Just a Tap Away
         </p>
       </motion.div>
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto mt-16">
         <motion.div
           {...fadeInUpAnimation}
           className="flex flex-col md:flex-row gap-4"
@@ -257,7 +257,7 @@ const Service = () => {
                   />
 
                   {/* Title Text */}
-                  <h3 className="text-2xl absolute bottom-4 left-4 font-openSans font-semibold z-20">
+                  <h3 className="text-xl absolute bottom-1 left-4 font-openSans font-semibold z-20">
                     {features[6].title}
                   </h3>
                 </div>

@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="flex-grow flex items-center justify-center px-4 pt-8 md:px-4">
         <div className="w-full max-w-screen-lg bg-[#E3E5FC] rounded-2xl overflow-hidden">
           {/* Title */}
-          <h1 className="text-xl md:text-[3.5vw] font-bold  font-poppins text-center text-black mb-10 leading-relaxed">
+          <h1 className="md:text-[5vw] text-[8vw] text-[#1C274C] font-poppins sm:text-[4vw] text-center font-bold">
             Need Help? <span className="text-[#8D93A5]">We've</span> Got You.
           </h1>
 
@@ -26,15 +26,10 @@ export default function Contact() {
               className="w-full md:w-[50vw] h-[30vw]"
             />
             {/* Download Button */}
-            <button className="absolute mt-48 mx-auto flex hover:opacity-90 items-center bg-blue-950 text-white px-4 py-2 sm:px-6 sm:py-4 md:px-12 md:py-6 rounded-3xl gap-2 sm:gap-3">
-              <span className="text-base sm:text-xl md:text-2xl font-openSans font-semibold">
+            <button className="flex hover:opacity-90 items-center bg-blue-950 text-white px-4 py-2 sm:px-6 sm:py-4 rounded-2xl gap-2 sm:gap-3">
+              <span className="text-base sm:text-xl font-semibold">
                 Let's Catch Up
               </span>
-              <img
-                src="/image/aboutPage/HandShake.png"
-                alt="arrow"
-                className="w-6 h-6"
-              />
             </button>
             <ContactStrip />
           </motion.div>

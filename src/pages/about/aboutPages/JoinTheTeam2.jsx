@@ -117,7 +117,7 @@ export default function JoinTheTeam2() {
                 exit="hidden"
               >
                 <div className="flex relative flex-col w-full items-center">
-                  <div className="w-[40vw] h-[40vw] flex items-center justify-center relative z-10 bg-white rounded-full shadow-2xl">
+                  <div className="w-[40vw] h-[40vw] flex items-center justify-center relative z-10 bg-white rounded-full ">
                     {/* The image */}
                     <img
                       className="w-[40vw] h-[40vw] rounded-full object-cover"

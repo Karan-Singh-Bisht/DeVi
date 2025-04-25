@@ -71,10 +71,10 @@ const GetTheApp = () => {
       className="border bg-[#F2F2F4] p-6 md:px-6 md:pt-6 md:pb-0 rounded-3xl shadow-2xl shadow-gray-400/40 flex flex-col items-center md:flex-row w-full md:w-[80vw] md:h-[40vw] text-center md:text-left"
     >
       <div className="w-full flex flex-col items-center h-[23vw] justify-evenly pl-[1vw] p-2">
-        <h2 className="text-xl sm:text-2xl md:text-[6vw] md:font-bold text-[#1E2A4A]">
+        <h2 className="text-xl sm:text-2xl md:text-[6vw] font-poppins md:font-bold text-[#1E2A4A]">
           Get <span className="text-gray-400"> The App</span>
         </h2>
-        <p className="text-gray-500 md:text-2xl font-mono mt-2 text-sm sm:text-base">
+        <p className="text-gray-500 md:text-2xl font-openSans mt-2 text-sm sm:text-base">
           And Step Into a New Era of Social Connection...
         </p>
         <div className="flex relative flex-col gap-4 sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
@@ -107,6 +107,7 @@ const GetTheApp = () => {
         </div>
       </div>
       <img
+        loading="lazy"
         src="/image/aboutPage/GirlImage.png"
         alt="Character"
         className="w-[50%] sm:w-[40%] md:w-[40%] h-full object-cover mt-4 md:mt-0"

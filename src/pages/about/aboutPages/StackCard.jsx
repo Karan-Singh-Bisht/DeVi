@@ -47,9 +47,7 @@ const StackCard = () => {
         markers: false,
         onUpdate: (self) => {
           const scrollY = self.scroll();
-          {
-            console.log(scrollY);
-          }
+
           let newIndex = null;
           const breakingPoints = [12500, 12600, 12700, 12900, 13200];
           breakingPoints.forEach((point, index) => {
@@ -97,7 +95,7 @@ const StackCard = () => {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className={`bg-white h-[29vw] w-[27vw] rounded-3xl shadow-lg transition-transform`}
+                className={`bg-white h-[30vw] w-[26vw] rounded-3xl shadow-lg transition-transform`}
               >
                 <img
                   src={image.url}
