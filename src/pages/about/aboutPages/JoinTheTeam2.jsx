@@ -121,7 +121,7 @@ export default function JoinTheTeam2() {
                     {/* The image */}
                     <img
                       className="w-[40vw] h-[40vw] rounded-full object-cover"
-                      src="/image/aboutPage/GirlFront.png"
+                      src="/image/aboutPage/JoinTheTeamImage.jpeg"
                       alt="image"
                     />
 
