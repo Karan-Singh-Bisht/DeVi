@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
-import Button from "../../../components/about/Button";
 
 const circleVariants = {
   initial: { scale: 1 },
@@ -8,11 +7,6 @@ const circleVariants = {
     scale: 10, // Adjust so the outer circle covers the page
     transition: { duration: 1, delay: 0.5, ease: "easeInOut" },
   },
-};
-
-const simpleContentVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5 } },
 };
 
 const detailedContentVariants = {
@@ -107,14 +101,14 @@ export default function JoinTheTeam2() {
         {/* Inner White Circle positioned absolutely over the outer circle */}
         <div className="absolute z-20 w-[24vw] h-[24vw] bg-white rounded-full flex flex-col items-center justify-center shadow-[0_0_20px_10px_rgba(255,255,255,0.6)]">
           <AnimatePresence mode="wait">
-            {showDetailed && (
+            {
               <motion.div
                 key="detailed"
                 className="absolute flex flex-col items-center text-center"
                 variants={detailedContentVariants}
                 initial="hidden"
                 animate="visible"
-                exit="hidden"
+                // exit="hidden"
               >
                 <div className="flex relative flex-col w-full items-center">
                   <div className="w-[40vw] h-[40vw] flex items-center justify-center relative z-10 bg-white rounded-full ">
@@ -155,7 +149,7 @@ export default function JoinTheTeam2() {
                   </div>
                 </div>
               </motion.div>
-            )}
+            }
           </AnimatePresence>
         </div>
       </div>
