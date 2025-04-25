@@ -6,17 +6,6 @@ const Feature = () => {
   const [downloads, setDownloads] = useState(0);
   const [countries, setCountries] = useState(0);
 
-  // Simulating counter animation
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setUsers((prev) => (prev < 150 ? prev + 1 : 150));
-  //     setDownloads((prev) => (prev < 300 ? prev + 2 : 300));
-  //     setCountries((prev) => (prev < 50 ? prev + 1 : 50));
-  //   }, 50);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
   return (
     <motion.div className="flex justify-center w-full h-screen items-center py-10">
       <motion.div
@@ -45,12 +34,6 @@ const Feature = () => {
           value={countries}
           label="Swipes"
         />
-        {/* <Divider />
-        <StatCard
-          image="/image/aboutPage/6_3.jpeg"
-          value={countries}
-          label="Countries"
-        /> */}
       </motion.div>
     </motion.div>
   );
@@ -79,4 +62,4 @@ const Divider = () => (
   <div className="hidden sm:block w-px bg-black h-[12vw] sm:h-32 md:h-[12vw]"></div>
 );
 
-export default Feature;
+export default React.memo(Feature);

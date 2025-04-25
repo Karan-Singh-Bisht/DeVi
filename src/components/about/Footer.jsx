@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,11 +7,11 @@ const Footer = () => {
       <footer className="bg-black rounded-3xl w-[99%] mx-auto text-white pt-16 px-6 md:px-24">
         <div className="flex flex-col md:flex-row justify-between items-start gap-16">
           {/* Logo + Store Links */}
-          <div className="flex flex-col gap-6 max-w-xs">
-            <Link to={"/"}>
+          <section className="flex flex-col gap-6 max-w-xs">
+            <Link to="/" aria-label="Home">
               <img
                 src="/image/aboutPage/DVWhiteLogo.png"
-                alt="Logo Image"
+                alt="Defines Vision Logo"
                 className="h-14 w-18"
               />
             </Link>
@@ -20,8 +20,10 @@ const Footer = () => {
             <div className="flex mt-4 gap-4">
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://play.google.com/store/apps/details?id=com.harsar.devi"
                 className="flex items-center justify-center gap-2 bg-white w-48 h-14 rounded-xl shadow-md hover:shadow-lg transition duration-200"
+                title="Download from Play Store"
               >
                 <span className="text-black text-lg font-semibold">
                   Play Store
@@ -35,8 +37,10 @@ const Footer = () => {
 
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947"
                 className="flex items-center justify-center gap-2 bg-white w-48 h-14 rounded-xl shadow-md hover:shadow-lg transition duration-200"
+                title="Download from App Store"
               >
                 <span className="text-black text-lg font-semibold">
                   App Store
@@ -48,58 +52,80 @@ const Footer = () => {
                 />
               </a>
             </div>
-          </div>
+          </section>
 
           {/* DV Links */}
-          <div className="flex flex-col gap-3">
+          <section className="flex flex-col gap-3">
             <h2 className="text-[2.5vw] font-bold font-poppins">DV</h2>
-            <a href="/about" className="text-lg hover:underline">
+            <Link
+              to="/about"
+              className="text-lg hover:underline"
+              title="About Us"
+            >
               About Us
-            </a>
+            </Link>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://careers.harsar.in"
               className="text-lg hover:underline"
+              title="Careers"
             >
               Careers
             </a>
-            <a
-              target="_blank"
-              href="privacyPolicy"
+            <Link
+              to="/privacyPolicy"
               className="text-lg hover:underline"
+              title="Privacy Policy"
             >
               Privacy Policy
-            </a>
-            <a
-              target="_blank"
-              href="/terms&conditions"
+            </Link>
+            <Link
+              to="/terms&conditions"
               className="text-lg hover:underline"
+              title="Terms & Conditions"
             >
               Terms & Conditions
-            </a>
-          </div>
+            </Link>
+          </section>
 
           {/* Business Links */}
-          <div className="flex flex-col gap-3">
+          <section className="flex flex-col gap-3">
             <h2 className="text-[2vw] font-bold mb-2">For Business</h2>
-            <a href="#" className="text-lg hover:underline">
+            <a
+              href="#"
+              className="text-lg hover:underline"
+              title="Become A Partner"
+            >
               Become A Partner
             </a>
-            <a href="#" className="text-lg hover:underline">
+            <a
+              href="#"
+              className="text-lg hover:underline"
+              title="Partner FAQs"
+            >
               Partner FAQs
             </a>
-          </div>
+          </section>
 
           {/* Help & Support */}
-          <div className="flex flex-col gap-3">
+          <section className="flex flex-col gap-3">
             <h2 className="text-[2vw] font-bold mb-2">Help & Support</h2>
-            <a href="about#contact" className="text-lg hover:underline">
+            <Link
+              to="/about#contact"
+              className="text-lg hover:underline"
+              title="Contact Us"
+            >
               Contact Us
-            </a>
-            <a href="/about#FAQs" className="text-lg hover:underline">
+            </Link>
+            <Link
+              to="/about#FAQs"
+              className="text-lg hover:underline"
+              title="FAQs"
+            >
               FAQs
-            </a>
-          </div>
+            </Link>
+          </section>
         </div>
 
         {/* Footer Bottom */}

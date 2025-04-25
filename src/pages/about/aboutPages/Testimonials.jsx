@@ -48,13 +48,7 @@ const Testimonials = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 mt-6">
           {testimonials.map((item, index) => (
-            <ExperienceCard
-              key={index}
-              image={item.image}
-              bgColor={item.bgColor}
-              title={item.title}
-              para={item.para}
-            />
+            <ExperienceCard key={index} {...item} />
           ))}
         </div>
       </motion.div>

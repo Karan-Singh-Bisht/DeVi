@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
-import ContactStrip from "../../../components/about/ContactStrip";
+const ContactStrip = React.lazy(() =>
+  import("../../../components/about/ContactStrip")
+);
 
 export default function Contact() {
   return (
@@ -21,6 +23,7 @@ export default function Contact() {
             className="relative w-full flex justify-center flex-col items-center mb-12"
           >
             <img
+              loading="lazy"
               src="/image/aboutPage/14_1.png"
               alt="two people"
               className="w-full md:w-[50vw] h-[30vw]"
@@ -31,7 +34,9 @@ export default function Contact() {
                 Let's Catch Up
               </span>
             </button>
-            <ContactStrip />
+            <Suspense fallback="none">
+              <ContactStrip />
+            </Suspense>
           </motion.div>
         </div>
       </div>

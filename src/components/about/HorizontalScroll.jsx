@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import "./styles.css";
 
@@ -58,7 +58,8 @@ const Card = ({ card }) => {
           {/* Circle Image */}
           <span className="md:w-[12vw] md:h-[10vw] h-[20vw] w-[20vw] rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg">
             <img
-              src="./image/aboutPage/Simha.png"
+              loading="lazy"
+              src="./image/aboutPage/Simha.webp"
               alt="Profile"
               className="md:w-full md:h-full w-[20vw] h-[20vw] object-cover rounded-full"
             />

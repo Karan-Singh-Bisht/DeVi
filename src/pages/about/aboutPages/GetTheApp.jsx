@@ -68,7 +68,7 @@ const GetTheApp = () => {
       initial={{ scale: 0.5, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="border bg-[#F2F2F4] p-6 md:px-6 md:pt-6 md:pb-0 rounded-3xl shadow-2xl shadow-gray-400/40 flex flex-col items-center md:flex-row w-full md:w-[80vw] md:h-[40vw] text-center md:text-left"
+      className="border relative bg-[#F2F2F4] p-6 md:px-6 md:pt-6 md:pb-0 rounded-3xl shadow-2xl shadow-gray-400/40 flex flex-col items-center md:flex-row w-full md:w-[80vw] md:h-[40vw] text-center md:text-left"
     >
       <div className="w-full flex flex-col items-center h-[23vw] justify-evenly pl-[1vw] p-2">
         <h2 className="text-xl sm:text-2xl md:text-[6vw] font-poppins md:font-bold text-[#1E2A4A]">
@@ -79,12 +79,14 @@ const GetTheApp = () => {
         </p>
         <div className="flex relative flex-col gap-4 sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
           <a
+            rel="noreferrer noopener"
             href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947"
             target="_blank"
           >
             <button className="bg-[#1E2A4A] md:text-3xl flex items-center justify-center gap-2 font-bold text-white md:px-8 md:py-6 rounded-xl w-full sm:w-auto">
               App Store
               <img
+                loading="lazy"
                 width="32"
                 src="/image/aboutPage/1_4.png"
                 alt="App Store Icon"
@@ -92,12 +94,14 @@ const GetTheApp = () => {
             </button>
           </a>
           <a
+            rel="noreferrer noopener"
             href="https://play.google.com/store/apps/details?id=com.harsar.devi"
             target="_blank"
           >
             <button className="bg-[#1E2A4A] md:text-3xl flex items-center justify-center gap-2 font-bold text-white md:px-8 md:py-6 rounded-xl w-full sm:w-auto">
               Download
               <img
+                loading="lazy"
                 width="32"
                 src="/image/aboutPage/1_3.png"
                 alt="Download Icon"

@@ -1,0 +1,26 @@
+.download-button-container {
+  display: flex;
+  margin-top: 1vw;
+  gap: 4;
+  justify-content: center;
+}
+
+.download-button-wrapper {
+  margin-top: 3vw;
+}
+
+.download-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #003366; /* Adjust the blue color */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  gap: 16px;
+}
+
+.download-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}

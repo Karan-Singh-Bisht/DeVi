@@ -3,18 +3,18 @@ import Homepage from "./aboutPages/Homepage";
 import SecondPage from "./aboutPages/SecondPage";
 import Service from "./aboutPages/Service";
 import { useLocation } from "react-router";
-import Footer from "../../components/about/Footer";
-import Contact from "./aboutPages/Contact";
 
 // Lazy-loaded components
+const Footer = React.lazy(() => import("../../components/about/Footer"));
 const ResponsiveHorizontalComponent = React.lazy(() =>
   import("../../components/about/HorizontalScroll")
 );
-const GetTheApp = React.lazy(() => import("./aboutPages/GetTheApp"));
-const Work = React.lazy(() => import("./aboutPages/Work"));
 const HorizontalScrollCarousel = React.lazy(() =>
   import("../../components/about/HorizontalScrollCarousel")
 );
+const Contact = React.lazy(() => import("./aboutPages/Contact"));
+const GetTheApp = React.lazy(() => import("./aboutPages/GetTheApp"));
+const Work = React.lazy(() => import("./aboutPages/Work"));
 const StackCard = React.lazy(() => import("./aboutPages/StackCard"));
 const Testimonials = React.lazy(() => import("./aboutPages/Testimonials"));
 const Awards = React.lazy(() => import("./aboutPages/Awards"));

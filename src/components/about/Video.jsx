@@ -32,6 +32,7 @@ export default function Video() {
           className="w-24 h-24 md:w-[30vw] md:h-[30vw] object-cover rounded-full"
           loop
           playsInline
+          preload="metadata"
           muted
         />
 

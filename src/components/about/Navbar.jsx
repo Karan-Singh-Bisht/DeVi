@@ -2,12 +2,12 @@ import React from "react";
 import { IoChevronBack } from "react-icons/io5";
 import { useNavigate } from "react-router";
 
-const Navbar = ({ color }) => {
+const Navbar = () => {
   const navigate = useNavigate();
 
   return (
     <nav
-      className={`w-full h-[8vh] sm:h-[10vh] md:h-[12vh] flex justify-between ${color} px-4 md:px-12 sm:px-6`}
+      className={`w-full h-[8vh] sm:h-[10vh] md:h-[12vh] flex justify-between px-4 md:px-12 sm:px-6`}
     >
       {/* Left Side: Back Button */}
       <button

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const ExperienceCard = ({ bgColor, image, title, para }) => {
+const ExperienceCard = React.memo(({ bgColor, image, title, para, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(true);
 
@@ -17,7 +17,7 @@ const ExperienceCard = ({ bgColor, image, title, para }) => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div key={index} className="flex flex-col justify-center items-center">
       {/* Image Container */}
       <motion.div
         whileHover={isLargeScreen ? { scale: 0.9 } : {}}
@@ -45,6 +45,6 @@ const ExperienceCard = ({ bgColor, image, title, para }) => {
       </motion.div>
     </div>
   );
-};
+});
 
 export default ExperienceCard;

@@ -1,5 +1,25 @@
 import { motion } from "framer-motion";
-import JoinButton from "../../../components/about/JoinButton";
+import { useMemo } from "react";
+import { Suspense } from "react";
+import React from "react";
+const JoinButton = React.lazy(() =>
+  import("../../../components/about/JoinButton")
+);
+
+const images = [
+  {
+    src: "/image/aboutPage/12_3.png",
+  },
+  {
+    src: "/image/aboutPage/12_4.png",
+  },
+  {
+    src: "/image/aboutPage/12_5.png",
+  },
+  {
+    src: "/image/aboutPage/12_6.png",
+  },
+];
 
 const Awards = () => {
   return (
@@ -28,8 +48,8 @@ const Awards = () => {
             className="w-[4rem] sm:w-[5rem] md:w-[6rem] h-auto rounded-md shadow-md"
           />
           <motion.img
-            initial={{ x: 250, y: 30, opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            initial={{ x: 250, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             src="/image/aboutPage/12_2.jpeg"
             loading="lazy"
@@ -42,29 +62,20 @@ const Awards = () => {
           Partners & Supporters
         </h3>
         <div className="flex flex-wrap justify-center items-center gap-6 mt-4 w-full mb-[2vw]">
-          <img
-            src="/image/aboutPage/12_3.png"
-            alt="Partner 1"
-            className="w-[5rem] sm:w-[6rem] md:w-[7rem] h-auto rounded-md"
-          />
-          <img
-            src="/image/aboutPage/12_4.png"
-            alt="Partner 2"
-            className="w-[5rem] sm:w-[6rem] md:w-[7rem] h-auto rounded-md"
-          />
-          <img
-            src="/image/aboutPage/12_5.png"
-            alt="Partner 3"
-            className="w-[5rem] sm:w-[6rem] md:w-[7rem] h-auto rounded-md"
-          />
-          <img
-            src="/image/aboutPage/12_6.png"
-            alt="Partner 4"
-            className="w-[5rem] sm:w-[6rem] md:w-[7rem] h-auto rounded-md"
-          />
+          {images.map((item, index) => (
+            <img
+              loading="lazy"
+              src={item.src}
+              alt="Partner"
+              key={index}
+              className="w-[5rem] sm:w-[6rem] md:w-[7rem] h-auto rounded-md"
+            />
+          ))}
         </div>
 
-        <JoinButton title={"Join With Us"}></JoinButton>
+        <Suspense fallback="none">
+          <JoinButton title="Join With Us" />
+        </Suspense>
       </motion.div>
     </div>
   );

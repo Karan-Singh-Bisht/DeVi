@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 
 const Service = () => {
@@ -63,17 +63,19 @@ const Service = () => {
   ];
 
   // Animation variants for consistent animations
-  const fadeInUpAnimation = {
-    initial: { scale: 0.8, opacity: 0 },
-    whileInView: { scale: 1, opacity: 1 },
-    transition: {
-      type: "spring",
-      stiffness: 90,
-      damping: 15,
-      duration: 0.5,
-      delay: 0.2,
-    },
-  };
+  const fadeInUpAnimation = useMemo(
+    () => ({
+      initial: { scale: 0.8, opacity: 0 },
+      whileInView: { scale: 1, opacity: 1 },
+      transition: {
+        type: "spring",
+        stiffness: 90,
+        damping: 15,
+        duration: 0.5,
+      },
+    }),
+    []
+  );
 
   return (
     <div className="w-full min-h-screen px-6 py-12 bg-[#FFFFFF]">
@@ -195,7 +197,7 @@ const Service = () => {
                   <img
                     loading="lazy"
                     src="/ic/Visiofeed Swipe Based.png"
-                    alt=""
+                    alt="visioFeed"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -210,12 +212,9 @@ const Service = () => {
         >
           {/* Fourth Row */}
           <div className="md:w-1/2">
-            <div className="flex mt-[16px] gap-4">
+            <motion.div className="flex mt-[16px] gap-4">
               {/* Personalized Chat */}
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0.5 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 90, damping: 15 }}
+              <div
                 className={`w-full md:w-1/2 bg-[#DFC9BE] md:h-[210px] h-[490px] overflow-hidden rounded-3xl relative`}
               >
                 <div
@@ -235,15 +234,10 @@ const Service = () => {
                     {features[5].title}
                   </h3>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Multiple Category */}
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0.5 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 90, damping: 15 }}
-                className="w-full md:w-1/2 bg-[#f6f3f3] h-[490px] md:h-[210px] overflow-hidden rounded-3xl relative"
-              >
+              <div className="w-full md:w-1/2 bg-[#f6f3f3] h-[490px] md:h-[210px] overflow-hidden rounded-3xl relative">
                 <div
                   className="relative h-full p-4 pt-2 flex flex-col justify-center items-center"
                   style={{ backgroundColor: features[6].backgroundColor }}
@@ -261,29 +255,27 @@ const Service = () => {
                     {features[6].title}
                   </h3>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
           {/* Third Row */}
           <div className="md:w-1/2">
-            <div className="mt-[16px]">
-              {/* Interactive Buddies Section */}
+            <div className="mt-4">
               <motion.div
-                initial={{ scale: 0.8, opacity: 0.5 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                {...fadeInUpAnimation}
                 className="col-span-1 md:col-span-6 w-full overflow-hidden rounded-3xl relative"
                 style={{ height: features[4].height }}
               >
                 <div
                   className="relative h-full bg-yellow-50 p-6 flex items-center w-full justify-around"
-                  style={{ backgroundColor: features[4].backgroundColor }}
+                  style={{
+                    backgroundColor: features[4].backgroundColor,
+                  }}
                 >
-                  {/* Title Text */}
                   <h3 className="text-lg md:text-2xl font-openSans font-semibold absolute bottom-3 left-4 md:left-6 text-center md:text-left z-20">
                     {features[4].title}
                   </h3>
-                  {/* Responsive Image */}
+
                   <img
                     loading="lazy"
                     src="/ic/Interactive Mapo.png"

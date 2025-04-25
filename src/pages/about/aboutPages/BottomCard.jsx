@@ -6,29 +6,30 @@ import { useRef } from "react";
 import { FaGooglePlay } from "react-icons/fa";
 import { GrAppleAppStore } from "react-icons/gr";
 import Feature from "./Feature";
-import { useNavigate } from "react-router";
 
 const BottomCard = () => {
   const mobileRef = useRef();
 
   useGSAP(() => {
-    gsap.fromTo(
-      mobileRef.current,
-      { y: -200 },
-      {
-        y: -100,
-        x: 0,
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: mobileRef.current,
-          start: "top 100%",
-          end: "bottom 80%",
-          scrub: 1,
-        },
-      },
-      [mobileRef]
-    );
-  });
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        mobileRef.current,
+        { y: -200 },
+        {
+          y: -100,
+          x: 0,
+          delay: 0.3,
+          scrollTrigger: {
+            trigger: mobileRef.current,
+            start: "top 100%",
+            end: "bottom 80%",
+            scrub: 1,
+          },
+        }
+      );
+    }, mobileRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>
@@ -40,6 +41,7 @@ const BottomCard = () => {
             className="w-full sm:w-[50%] md:w-[20vw] border-[0.7vw] rounded-[2vw] border-white"
           >
             <video
+              loading="lazy"
               src="/video/DV-App.mp4"
               autoPlay
               loop
@@ -66,6 +68,7 @@ const BottomCard = () => {
             {/* Navigation Buttons */}
             <div className="flex justify-center md:justify-start gap-6 mt-5">
               <a
+                rel="noopener noreferrer"
                 href="https://play.google.com/store/apps/details?id=com.harsar.devi"
                 target="_blank"
               >
@@ -74,6 +77,7 @@ const BottomCard = () => {
                 </button>
               </a>
               <a
+                rel="noopener noreferrer"
                 href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947"
                 target="_blank"
               >

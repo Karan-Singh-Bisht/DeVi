@@ -39,6 +39,7 @@ const HorizontalScrollCarousel = () => {
         <div className="sticky top-0 flex h-screen items-center overflow-hidden flex-col">
           <div className="bg-white w-full text-center py-6 px-4 sticky top-0 z-10">
             <img
+              loading="lazy"
               className="rounded-full w-12 h-12 mx-auto"
               src="/image/aboutPage/1_1.png"
               alt="Profile"
@@ -65,6 +66,7 @@ const HorizontalScrollCarousel = () => {
             {/* Header Card */}
             <div className="bg-white min-w-[280px] sm:min-w-[320px] md:min-w-[360px] lg:w-[30vw] px-6 py-6 sm:px-8 md:px-10 lg:px-[6vw] lg:py-[4vw] tracking-tighter">
               <img
+                loading="lazy"
                 className="rounded-full bg-gray-200 w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[6vw] lg:h-[6vw]"
                 src="/image/aboutPage/GirlRightImage.png"
                 alt="Profile"
@@ -76,7 +78,7 @@ const HorizontalScrollCarousel = () => {
                   DV
                 </span>
               </h1>
-              <p className="font-base text-base sm:text-lg md:text-xl tracking-wide mt-2 font-openSans">
+              <p className="font-base text-base sm:text-lg md:text-xl tracking-wide mt-5 font-openSans">
                 is your best social media
               </p>
             </div>

@@ -30,8 +30,9 @@ const Home = () => {
     }, 100);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    // Handle form submission logic here
   };
 
   return (
@@ -61,7 +62,7 @@ const Home = () => {
                 <input
                   className="border-2 border-gray-300 rounded-lg w-full p-2 mb-4"
                   type="text"
-                  placeholder="phone number,username, or email"
+                  placeholder="phone number, username, or email"
                 />
                 <input
                   className="border-2 border-gray-300 rounded-lg p-2 mb-4"
@@ -97,17 +98,23 @@ const Home = () => {
         <main className="flex-grow w-full overflow-hidden flex flex-col lg:flex-row px-[10%] pt-28 pb-12 lg:py-12 justify-around items-center gap-12 lg:gap-0">
           <div>
             <img
+              decoding="async"
+              rel="preload"
+              loading="eager"
               src="/image/homePage/1_2.png"
               className="object-cover w-[80vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]"
-              alt=""
+              alt="HomeImage"
             />
           </div>
 
           <div className="flex flex-col gap-4 items-center">
             <img
+              decoding="async"
+              rel="preload"
+              loading="eager"
               src="/image/homePage/Logo.png"
               className="object-cover w-[40vw] sm:w-[28vw] md:w-[18vw] lg:w-[12vw]"
-              alt=""
+              alt="Companylogo"
             />
             <h1 className="mt-5 font-semibold font-pacifico text-[2vw]">
               Defines Vision
@@ -130,11 +137,13 @@ const Home = () => {
 
             <div className="flex gap-4">
               <a
+                rel="noopener noreferrer"
                 target="_blank"
                 className="hover:cursor-pointer"
                 href="https://play.google.com/store/apps/details?id=com.harsar.devi"
               >
                 <img
+                  loading="lazy"
                   src="/image/homePage/1_5.png"
                   className="object-cover w-[10vw] sm:w-[8vw] md:w-[5vw] lg:w-[3vw]"
                   alt="playStore"
@@ -142,11 +151,13 @@ const Home = () => {
               </a>
 
               <a
+                rel="noopener noreferrer"
                 className="hover:cursor-pointer"
                 target="_blank"
                 href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947"
               >
                 <img
+                  loading="lazy"
                   src="/image/homePage/1_6.png"
                   className="object-cover w-[10vw] sm:w-[8vw] md:w-[5vw] lg:w-[3vw]"
                   alt="appStore"

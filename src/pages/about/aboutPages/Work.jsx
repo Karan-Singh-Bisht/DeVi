@@ -2,9 +2,6 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { FaApple, FaAndroid } from "react-icons/fa";
-import { CgMail } from "react-icons/cg";
-import { CiLock } from "react-icons/ci";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,36 +11,28 @@ export default function Work() {
   const card3Ref = useRef();
 
   useGSAP(() => {
-    gsap.fromTo(
-      card2Ref.current,
-      { y: 0 },
-      {
-        y: -100,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: card2Ref.current,
-          start: "top 50%",
-          end: "bottom 70%",
-          scrub: 1,
-        },
-      },
-      [card2Ref]
-    );
-    gsap.fromTo(
-      card3Ref.current,
-      { y: 0 },
-      {
-        y: -200,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: card3Ref.current,
-          start: "top 50%",
-          end: "bottom 70%",
-          scrub: 1,
-        },
-      },
-      [card3Ref]
-    );
+    const ctx = gsap.context(() => {
+      [
+        { ref: card2Ref, y: -50 },
+        { ref: card3Ref, y: -100 },
+      ].forEach(({ ref, y }) =>
+        gsap.fromTo(
+          ref.current,
+          { y: 50 },
+          {
+            y,
+            duration: 0.5,
+            scrollTrigger: {
+              trigger: ref.current,
+              start: "top 50%",
+              end: "bottom 70%",
+              scrub: 1,
+            },
+          }
+        )
+      );
+    });
+    return () => ctx.revert();
   });
 
   return (
@@ -60,8 +49,9 @@ export default function Work() {
         </span>
         <span>
           <img
+            loading="lazy"
             className="mx-8 w-44 h-28 rounded-full object-cover"
-            src="/image/aboutPage/Simha.png"
+            src="/image/aboutPage/Simha.webp"
             alt="image"
           />
         </span>{" "}
@@ -83,13 +73,9 @@ export default function Work() {
           className="p-6 rounded-2xl flex flex-col justify-between shadow-lg bg-[#E4F2FF] text-center mt-0 h-[400px] sm:h-[350px] md:h-[24vw] relative"
         >
           <div className="relative flex items-center justify-center">
-            {/* <button className="flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-12 md:transform-none md:-translate-x-0 md:-translate-y-1/2 z-10 items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-[#041C45] text-white text-base md:text-lg font-semibold rounded-full shadow-md border-2 border-purple-500 hover:bg-[#062A6E] transition-all"> */}
-            {/* <FaApple className="text-xl md:text-2xl" /> */}
-            {/* <FaAndroid className="text-xl md:text-2xl" /> */}
-            {/* <span className="text-sm md:text-xl">Get The App</span> */}
-            {/* </button> */}
             <div className="pt-10">
               <img
+                loading="lazy"
                 src="/ic/Get The App.png"
                 alt="Download App"
                 className="w-20 md:w-[13vw] mx-auto mb-4 rounded-xl"
@@ -114,6 +100,7 @@ export default function Work() {
         >
           <div className="flex flex-col gap-4 my-auto">
             <img
+              loading="lazy"
               src="/ic/Get The App.png"
               alt="Download App"
               className="w-20 md:w-[13vw] mx-auto mb-4 rounded-xl"
@@ -137,29 +124,8 @@ export default function Work() {
           className="px-6 pb-6 flex flex-col justify-between rounded-2xl shadow-lg bg-[#F6F8FF] text-center mt-0 md:mt-16 h-[400px] sm:h-[350px] md:h-[24vw] relative"
         >
           <div className="flex flex-col relative pt-[1vw] h-3/4">
-            {/* Image positioning preserved but made responsive */}
-            {/* <div className="absolute z-10 w-[140vw] top-[50%] md:w-[20vw] md:top-[25%] md:left-0">
-              <img
-                src="/image/aboutPage/8_4.png"
-                alt="Earn Cashback"
-                className="w-[40%] md:w-[14vw] h-auto md:mx-[-2vw] md:my-[6vw]"
-              />
-            </div>
-            <div className="absolute z-0 w-[150vw] md:w-[35vw] top-[20%] md:right-0 md:top-[8vw]">
-              <img
-                src="/image/aboutPage/8_2.png"
-                alt="Earn Cashback"
-                className="w-[40%] md:w-[14vw] h-auto md:mx-[18vw] md:my-[-2vw]"
-              />
-            </div>
-            <div className="absolute w-[150vw] top-[40%] left-[40%] md:right-0 md:top-[6vw]">
-              <img
-                src="/image/aboutPage/8_3.png"
-                alt="Earn Cashback"
-                className="w-[40%] md:w-[16vw] h-auto"
-              />
-            </div> */}
             <img
+              loading="lazy"
               src="/ic/Get The App.png"
               alt="Download App"
               className="w-20 md:w-[13vw] mx-auto mb-4 rounded-xl"

@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 import ResponsiveCardStack from "../../../components/about/ResponsiveCardStack";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +31,14 @@ const StackCard = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const options = useMemo(() => [
+    "Curated Chaos",
+    "MultiVerses of Creators",
+    "Community Connections",
+    "Vernacular Vibes",
+    "Be The Buzz Maker",
+  ]);
+
   // Scroll-triggered animation
   useGSAP(() => {
     if (!isDesktop) return;
@@ -46,16 +54,13 @@ const StackCard = () => {
         pin: true,
         markers: false,
         onUpdate: (self) => {
-          const scrollY = self.scroll();
-
-          let newIndex = null;
-          const breakingPoints = [12500, 12600, 12700, 12900, 13200];
-          breakingPoints.forEach((point, index) => {
-            if (scrollY >= point) {
-              newIndex = index;
-            }
-          });
-          setActiveIndex(newIndex);
+          const progress = self.progress;
+          const sectionCount = images.length;
+          const newIndex = Math.floor(progress * (sectionCount - 0.625) + 0.4);
+          const clampedIndex = Math.min(sectionCount - 1, newIndex);
+          if (clampedIndex !== activeIndex) {
+            setActiveIndex(clampedIndex);
+          }
         },
       },
     });
@@ -98,6 +103,7 @@ const StackCard = () => {
                 className={`bg-white h-[30vw] w-[26vw] rounded-3xl shadow-lg transition-transform`}
               >
                 <img
+                  loading="lazy"
                   src={image.url}
                   alt={`stack-${index}`}
                   className="object-cover w-full h-full rounded-3xl"
@@ -117,13 +123,7 @@ const StackCard = () => {
               <span className="">Ahead</span>
             </h1>
             <ul className="text-[2vw] md:text-[1.2vw] text-gray-500 mt-6 space-y-3">
-              {[
-                "Curated Chaos",
-                "MultiVerses of Creators",
-                "Community Connections",
-                "Vernacular Vibes",
-                "Be The Buzz Maker",
-              ].map((text, index) => (
+              {options.map((text, index) => (
                 <li
                   key={index}
                   onClick={() => handleTextClick(index)}
