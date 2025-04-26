@@ -31,7 +31,7 @@ const About = () => {
     if (location.hash === "#contact" && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    if (location.hash === "#FAQ" && FAQRef.current) {
+    if (location.hash === "#FAQs" && FAQRef.current) {
       FAQRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);

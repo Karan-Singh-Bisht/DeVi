@@ -61,6 +61,7 @@ const Footer = () => {
               to="/about"
               className="text-lg hover:underline"
               title="About Us"
+              onClick={() => window.scrollTo(0, 0)}
             >
               About Us
             </Link>

@@ -7,11 +7,11 @@ import ResponsiveCardStack from "../../../components/about/ResponsiveCardStack";
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  { url: "/image/aboutPage/8_1.png", bgColor: "#1C274C" },
-  { url: "/image/aboutPage/8_2.png", bgColor: "" },
-  { url: "/image/aboutPage/8_3.png", bgColor: "" },
-  { url: "/image/aboutPage/8_4.png", bgColor: "" },
-  { url: "/image/aboutPage/9_1.png", bgColor: "" },
+  { url: "/image/aboutPage/StackCard1.webp", bgColor: "#1C274C" },
+  { url: "/image/aboutPage/StackCard2.webp", bgColor: "" },
+  { url: "/image/aboutPage/StackCard3.webp", bgColor: "" },
+  { url: "/image/aboutPage/StackCard4.webp", bgColor: "" },
+  { url: "/image/aboutPage/StackCard5.webp", bgColor: "" },
 ];
 
 const StackCard = () => {
