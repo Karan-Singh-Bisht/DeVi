@@ -23,7 +23,7 @@ const SecondPage = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-white text-[5vw] sm:text-[3.5vw] md:text-[2vw] lg:text-[1.5vw] z-10 text-center mt-[8vw] sm:mt-[6vw]"
+        className="text-white text-[5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw] z-10 text-center mt-[8vw] sm:mt-[6vw]"
       >
         “ Discover in a new way—access content and connect with <br />{" "}
         masterminds, match with like-minds based on your interests."

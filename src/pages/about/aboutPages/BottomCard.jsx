@@ -38,7 +38,7 @@ const BottomCard = () => {
           {/* Mobile App Mockup */}
           <div
             ref={mobileRef}
-            className="w-full sm:w-[50%] md:w-[20vw] border-[0.7vw] rounded-[2vw] border-white"
+            className="w-full sm:w-[50%] md:w-[30vw] md:rounded-[3.8vw] border-[1.5vw] rounded-[7.1vw] sm:border-[1vw] lg:border-[0.7vw] xl:border-[0.35] sm:rounded-[9vw] lg:rounded-[3.2vw] xl:rounded-[1.85vw] border-white"
           >
             <video
               loading="lazy"
@@ -55,9 +55,9 @@ const BottomCard = () => {
             initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: -50, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-center md:text-left flex flex-col w-full gap-24 md:w-[60%]"
+            className="text-center md:text-left flex flex-col w-full gap-4 sm:gap-24 md:w-[60%] lg:w-[70%]"
           >
-            <h2 className="text-2xl font-openSans sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 leading-loose">
+            <h2 className="text-[4.5vw] font-openSans sm:text-xl md:text-xl lg:text-[2.1vw] xl:text-[1.4vw] font-semibold text-gray-800 leading-loose">
               One app. Two lives, Switch between <br /> your buddy life and
               business life— <br /> no drama, just DV where personalized
               <br />

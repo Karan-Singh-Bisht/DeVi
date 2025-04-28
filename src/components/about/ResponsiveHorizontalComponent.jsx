@@ -16,7 +16,7 @@ const HorizontalScroll = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-65%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
 
   return (
     <section ref={targetRef} className="relative bg-[#8D93A5] h-[300vh]">
@@ -38,7 +38,7 @@ const Card = ({ card }) => {
       whileInView={{ x: -100, opacity: 1 }}
       transition={{ duration: 1 }}
       key={card.id}
-      className="group w-[800vw] h-[100px] relative md:h-[450px] md:w-[300vw] overflow-hidden"
+      className="group w-[800vw] h-[100px] relative md:h-[450px] md:w-[370vw] overflow-hidden"
     >
       {/* Background Image */}
       <div
@@ -52,7 +52,7 @@ const Card = ({ card }) => {
 
       {/* Text & Image Container */}
       <div className="absolute inset-0 z-10 flex items-center justify-center gap-4">
-        <p className="text p-8 text-[30vw] md:text-[14vw] font-black text-white flex items-center">
+        <p className="text p-8 text-[30vw] md:text-[19.5vw] xl:text-[18vw] font-black text-white flex items-center">
           <span className="font-madimiOne">Explore,</span>
           &nbsp;
           {/* Circle Image */}
@@ -80,9 +80,9 @@ const Card = ({ card }) => {
 // Mobile Component (No Animation)
 const MobileComponent = () => {
   return (
-    <section className="bg-[#E1C5FE] h-[80vw] flex p-8">
-      <p className="text-center text-[10vw] font-black text-[#1D284D]">
-        <span className="text-[#828282]">Just</span> Explore, Enrich, Embrace
+    <section className="bg-[#8D93A5] h-[85vw] flex p-8">
+      <p className="text-center text-[10vw] font-semibold font-poppins text-white">
+        Explore, Enrich, Experience & Embrace
       </p>
     </section>
   );

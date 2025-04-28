@@ -5,10 +5,10 @@ export default function Video() {
   const [canPlay, setCanPlay] = useState(false);
 
   return (
-    <div className="relative z-10 hover:cursor-pointer rounded-full p-2 md:p-4 flex justify-center items-center group">
+    <div className="relative z-10 flex justify-center items-center p-2 sm:p-4 md:p-6 lg:p-8">
       {/* Video Container */}
       <div
-        className="relative"
+        className="relative group flex justify-center items-center"
         onMouseEnter={(e) => {
           if (canPlay) {
             const video = e.currentTarget.querySelector("video");
@@ -29,20 +29,20 @@ export default function Video() {
       >
         <video
           src="/video/DV-Intro.mp4"
-          className="w-24 h-24 md:w-[30vw] md:h-[30vw] object-cover rounded-full"
+          className="rounded-full object-cover w-[90vw] h-[90vw] sm:w-[60vw] sm:h-[60vw] md:w-[55vw] md:h-[55vw] lg:w-[40vw] lg:h-[40vw] xl:w-[35vw] xl:h-[35vw]"
           loop
           playsInline
           preload="metadata"
           muted
         />
 
-        {/* Play Button (only visible before first click) */}
+        {/* Play Button (visible overlay before click) */}
         {!canPlay && (
           <button
             onClick={() => setCanPlay(true)}
-            className="absolute inset-0 flex justify-center items-center rounded-full text-white hover:bg-black/60 transition"
+            className="absolute inset-0 flex justify-center items-center rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition"
           >
-            <FaPlay className="w-6 h-6 md:w-10 md:h-10" />
+            <FaPlay className="text-white w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
           </button>
         )}
       </div>

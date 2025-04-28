@@ -13,7 +13,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    [isMobile ? "40%" : "1%", isMobile ? "-40%" : "-65%"]
+    [isMobile ? "40%" : "1%", isMobile ? "-40%" : "-70%"]
   );
 
   // Check if the screen is mobile
@@ -37,22 +37,24 @@ const HorizontalScrollCarousel = () => {
     >
       {isMobile ? (
         <div className="sticky top-0 flex h-screen items-center overflow-hidden flex-col">
-          <div className="bg-white w-full text-center py-6 px-4 sticky top-0 z-10">
+          <div className="bg-white w-full text-left pt-6 px-4 sticky top-0 z-10">
             <img
               loading="lazy"
-              className="rounded-full w-12 h-12 mx-auto"
+              className="rounded-full p-4 w-28 h-28 bg-[#F6F8FF]"
               src="/image/aboutPage/1_1.png"
               alt="Profile"
             />
-            <h1 className="text-3xl sm:text-4xl font-medium mt-3">Why DV</h1>
-            <p className="font-semibold text-base sm:text-lg tracking-wide mt-1">
+            <h1 className="text-[20vw] tracking-tighter leading-tight sm:text-4xl font-bold font-poppins mt-3">
+              Why <br></br> <span className="text-[#8D93A5]">DV</span>
+            </h1>
+            <p className="font-semibold text-xl sm:text-lg tracking-wide mt-1 font-openSans">
               is your best social media
             </p>
           </div>
 
           {/* Horizontal scroll section */}
           <div className="sticky top-0 flex h-[100vh] items-center overflow-hidden">
-            <motion.div style={{ x }} className="flex gap-4">
+            <motion.div style={{ x }} className="flex gap-4 px-2 mb-8 mt-8">
               {cards.map((card) => (
                 <Card card={card} key={card.id} isMobile={isMobile} />
               ))}
@@ -98,8 +100,8 @@ const Card = ({ card, isMobile }) => {
   return (
     <div
       key={card.id}
-      className="group relative rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-[3vw] 
-                h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] 
+      className="group relative rounded-[10vw] sm:rounded-xl md:rounded-2xl lg:rounded-[3vw] 
+                h-[520px] sm:h-[350px] md:h-[400px] lg:h-[500px] 
                 min-w-[400px] sm:min-w-[400px] md:min-w-[600px] lg:min-w-[850px] 
                 overflow-hidden"
       style={{ backgroundColor: card.bgColor }}
@@ -109,10 +111,10 @@ const Card = ({ card, isMobile }) => {
         <div className="flex flex-col h-full">
           {/* Content in vertical layout for mobile */}
           <div className="p-6 flex-1">
-            <h1 className="text-xl sm:text-2xl font-black uppercase text-black leading-tight">
+            <h1 className="text-3xl sm:text-2xl font-bold font-amaranth text-black leading-tight">
               {card.title}
             </h1>
-            <p className="mt-2 text-xs sm:text-sm font-black text-gray-500">
+            <p className="mt-1 text-lg sm:text-sm font-openSans text-gray-500">
               {card.para}
             </p>
           </div>
@@ -167,7 +169,7 @@ export default HorizontalScrollCarousel;
 
 const cards = [
   {
-    url: "/image/aboutPage/GirlLeftSide.png",
+    url: "/image/aboutPage/GirlLeftSide.webp",
     title: (
       <>
         One Platform for
@@ -180,7 +182,7 @@ const cards = [
     bgColor: "#F3F3F5",
   },
   {
-    url: "/image/aboutPage/GirlTeeth.png",
+    url: "/image/aboutPage/GirlTeeth.webp",
     title: (
       <>
         Less Noise, More <br />
@@ -197,7 +199,7 @@ const cards = [
     bgColor: "#F5EEFF",
   },
   {
-    url: "/image/aboutPage/GirlOpenMouth.png",
+    url: "/image/aboutPage/GirlOpenMouth.webp",
     title: (
       <>
         Effortless <br /> Socializing
@@ -213,7 +215,7 @@ const cards = [
     bgColor: "#FFF5E0",
   },
   {
-    url: "/image/aboutPage/GirlTOngue.png",
+    url: "/image/aboutPage/GirlTOngue.webp",
     title: (
       <>
         Mapo Spots <br /> & Events
@@ -229,7 +231,7 @@ const cards = [
     bgColor: "#FFE8E0",
   },
   {
-    url: "/image/aboutPage/GirlRight.png",
+    url: "/image/aboutPage/GirlRight.webp",
     title: (
       <>
         Verfied Profiles <br />& Secure Space

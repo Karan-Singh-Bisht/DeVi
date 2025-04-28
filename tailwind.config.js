@@ -10,7 +10,6 @@ module.exports = {
         },
       },
       animation: {
-        // "rotate-words": "rotateWords 20s steps(7) infinite",
         "rotate-words": "rotateWords 12s steps(7) infinite",
       },
       fontFamily: {
@@ -20,6 +19,7 @@ module.exports = {
         madimiOne: ["Madimi One", "sans-serif"],
         detoks: ["detoks", "sans-serif"],
         pacifico: ["Pacifico", "cursive"],
+        amaranth: ["amaranth", "poppins"],
       },
     },
   },

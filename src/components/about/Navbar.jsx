@@ -6,23 +6,21 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav
-      className={`w-full h-[8vh] sm:h-[10vh] md:h-[12vh] flex justify-between px-4 md:px-12 sm:px-6`}
-    >
+    <nav className="w-full h-16 sm:h-20 md:h-24 flex justify-between items-center px-4 sm:px-6 md:px-12 relative">
       {/* Left Side: Back Button */}
       <button
-        className="w-[15vw] h-[8vh] sm:w-20 md:w-24 lg:w-[5vw] md:h-[10vh] flex items-center justify-center bg-black rounded-b-full"
+        className="h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24 lg:w-28 flex items-center justify-center bg-black rounded-b-full"
         onClick={() => navigate(-1)}
       >
-        <IoChevronBack className="text-white text-[6vw] md:text-[4vw] sm:text-[6vw] lg:text-[3vw]" />
+        <IoChevronBack className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
       </button>
 
-      {/* Center Logo: Positioned Dynamically */}
-      <div className="flex items-center mt-5 absolute left-1/2 transform -translate-x-1/2">
+      {/* Center Logo */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 top-5 sm:top-6 md:top-8">
         <img
           src="./image/homePage/Logo.png"
           alt="Company Name"
-          className="w-[22vw] sm:w-[7vw] md:w-[6vw] h-[14vw] sm:h-[5vw] md:h-[4vw]"
+          className="h-12 sm:h-14 md:h-16 w-auto object-contain"
         />
       </div>
     </nav>

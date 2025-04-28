@@ -7,7 +7,7 @@ import { useLocation } from "react-router";
 // Lazy-loaded components
 const Footer = React.lazy(() => import("../../components/about/Footer"));
 const ResponsiveHorizontalComponent = React.lazy(() =>
-  import("../../components/about/HorizontalScroll")
+  import("../../components/about/ResponsiveHorizontalComponent")
 );
 const HorizontalScrollCarousel = React.lazy(() =>
   import("../../components/about/HorizontalScrollCarousel")

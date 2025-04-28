@@ -26,7 +26,7 @@ const Awards = () => {
     <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8">
       <motion.div
         className="w-full flex gap-5 flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-8"
-        initial={{ opacity: 0, scale: 0 }}
+        initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >

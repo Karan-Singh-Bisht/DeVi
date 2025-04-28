@@ -6,35 +6,44 @@ const ContactStrip = React.lazy(() =>
 
 export default function Contact() {
   return (
-    <div className="min-h-screen w-screen bg-[#E3E5FC] flex flex-col">
-      {/* Content */}
-      <div className="flex-grow flex items-center justify-center px-4 pt-8 md:px-4">
-        <div className="w-full max-w-screen-lg bg-[#E3E5FC] rounded-2xl overflow-hidden">
+    <div className="min-h-screen w-full bg-[#C5CBDB] flex flex-col">
+      {/* Main Content */}
+      <div className="flex-grow flex items-center justify-center px-4 pt-8">
+        <div className="w-full max-w-6xl bg-inherit rounded-2xl overflow-hidden flex flex-col items-center">
           {/* Title */}
-          <h1 className="md:text-[5vw] text-[8vw] text-[#1C274C] font-poppins sm:text-[4vw] text-center font-bold">
+          <h1
+            className="text-center font-bold font-poppins text-[#1C274C] mb-8 leading-tight
+                        text-4xl sm:text-5xl md:text-6xl"
+          >
             Need Help? <span className="text-[#8D93A5]">We've</span> Got You.
           </h1>
 
-          {/* Characters Container */}
+          {/* Image and Button */}
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="relative w-full flex justify-center flex-col items-center mb-12"
+            className="relative flex flex-col items-center gap-6 w-full px-2"
           >
+            {/* Contact Image */}
             <img
               loading="lazy"
-              src="/image/aboutPage/14_1.png"
-              alt="two people"
-              className="w-full md:w-[50vw] h-[30vw]"
+              src="/image/aboutPage/Contact.webp"
+              alt="two_people"
+              className="w-full max-w-3xl object-contain rounded-xl"
             />
-            {/* Download Button */}
-            <button className="flex hover:opacity-90 items-center bg-blue-950 text-white px-4 py-2 sm:px-6 sm:py-4 rounded-2xl gap-2 sm:gap-3">
-              <span className="text-base sm:text-xl font-semibold">
-                Let's Catch Up
-              </span>
+
+            {/* CTA Button */}
+            <button
+              className="flex items-center justify-center bg-blue-950 text-white
+                               px-6 py-3 sm:px-8 sm:py-4 rounded-full gap-2 sm:gap-4 
+                               text-base sm:text-lg md:text-xl font-semibold hover:opacity-90 transition"
+            >
+              Let's Catch Up
             </button>
-            <Suspense fallback="none">
+
+            {/* Contact Strip */}
+            <Suspense fallback={<div>Loading...</div>}>
               <ContactStrip />
             </Suspense>
           </motion.div>

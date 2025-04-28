@@ -69,9 +69,16 @@ export default function JoinTheTeam2() {
 
   if (isMobile) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen w-full bg-[#E7F1FF] p-4">
-        <h2 className="text-2xl font-bold text-center">
-          Join the <span className="text-purple-600">DeVi</span> team
+      <div
+        className="flex flex-col items-center justify-center h-screen w-full bg-[#E7F1FF] p-4 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("/image/aboutPage/GirlImage.png")',
+          height: "200vw",
+        }}
+      >
+        <h2 className="text-[18vw] font-bold text-center font-amaranth">
+          Join the
+          <br /> <span className="text-gray-400">DV</span> team
         </h2>
         <div className="flex gap-4 mt-4">
           <div className="w-12 h-12 bg-gray-300 rounded-full" />
@@ -88,7 +95,7 @@ export default function JoinTheTeam2() {
     <div className="bg-white min-h-[40vh] md:min-h-[135vh] flex flex-col items-center justify-center overflow-hidden relative">
       <div className="flex items-center relative justify-center mt-16">
         <motion.div
-          className="w-[36vw] h-[36vw] bg-[#E3E5FC] rounded-full relative z-10"
+          className="w-[36vw] h-[36vw] bg-[#C5CBDB] rounded-full relative z-10"
           initial="initial"
           whileInView="expanded"
           variants={circleVariants}

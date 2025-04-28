@@ -7,7 +7,6 @@ import "./HomePage.css";
 const Homepage = () => {
   const [HREF, setHREF] = useState("");
 
-  // Platform-specific download link
   useEffect(() => {
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {
       requestIdleCallback(() => {
@@ -38,10 +37,7 @@ const Homepage = () => {
   );
 
   return (
-    <div
-      style={{ position: "relative" }}
-      className="flex relative font-roboto gap-4 flex-col h-[160vw] md:h-screen overflow-x-hidden overflow-hidden"
-    >
+    <div className="flex gap-8 sm:gap-0 relative font-roboto flex-col min-h-screen overflow-x-hidden overflow-hidden">
       {/* Navbar */}
       <div className="w-full">
         <Navbar />
@@ -49,7 +45,7 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="flex flex-col flex-1 items-center justify-start mt-[6vw] bg-white px-6 text-center relative"
+        className="flex flex-col flex-1 justify-center items-center sm:justify-start mt-[10vw] sm:mt-[8vw] bg-white px-4 sm:px-6 text-center relative"
         initial="hidden"
         animate="visible"
         variants={{
@@ -61,71 +57,76 @@ const Homepage = () => {
           },
         }}
       >
-        {/* Animate Each Child with y: 50 → 0 */}
-        <motion.p
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-          }}
-          className="text-[6vw] flex items-center font-semibold leading-tight font-poppins"
-        >
-          Just Have D V
-          <span>
-            <img
-              rel="preload"
-              loading="eager"
-              decoding="async"
-              className="mx-8 w-44 h-28 rounded-full object-cover"
-              src="/image/aboutPage/Simha.webp"
-              alt="image"
-            />
-          </span>{" "}
-          , It
-        </motion.p>
+        <div>
+          {/* Title Line */}
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+            }}
+            className="text-[10vw] sm:text-[7vw] md:text-[6vw] flex items-center font-semibold leading-tight font-poppins flex-wrap justify-center"
+          >
+            Just Have D V
+            <span className="mx-4">
+              <img
+                rel="preload"
+                loading="eager"
+                decoding="async"
+                className="w-[20vw] h-[12vw] sm:w-32 sm:h-20 md:w-44 md:h-28 rounded-full object-cover inline-block"
+                src="/image/aboutPage/Simha.webp"
+                alt="image"
+              />
+            </span>
+            , It
+          </motion.p>
 
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-          }}
-          className="flex justify-center gap-5 items-center text-[6vw] font-semibold leading-tight font-fredroka"
-        >
-          <span>Defines</span>
+          {/* Rotating Words */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+            }}
+            className="flex justify-center gap-3 sm:gap-5 items-center text-[10vw] sm:text-[7vw] md:text-[6vw] font-semibold leading-tight font-fredroka flex-wrap"
+          >
+            <span>Defines</span>
 
-          <div className="relative h-[7vw] overflow-hidden">
-            <div className="animate-rotate-words flex flex-col">
-              {rotatingWords.map((word, i) => (
-                <div
-                  key={i}
-                  className="h-[7vw] flex items-center justify-center text-[6vw] font-fredroka text-[#8D93A5]"
-                >
-                  {word}
-                </div>
-              ))}
+            <div className="relative h-14 sm:h-20 md:h-24 lg:h-[7vw] overflow-hidden">
+              <div className="animate-rotate-words flex flex-col">
+                {rotatingWords.map((word, i) => (
+                  <div
+                    key={i}
+                    className="h-14 sm:h-20 md:h-24 lg:h-[7vw] flex items-center justify-center text-4xl xs:text-5xl sm:text-6xl md:text-[6vw] lg:text-[6vw] text-[#8D93A5]"
+                  >
+                    {word}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <span>Vision</span>
-        </motion.div>
+            <span>Vision</span>
+          </motion.div>
 
-        <motion.p
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-          }}
-          className="mt-11 text-[4vw] sm:text-[2.5vw] md:text-[1.5vw]"
-        >
-          A Hyper Social Media - where
-          <br /> content to connections, <br />
-          everything is just how you like it.
-        </motion.p>
+          {/* Subtext */}
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+            }}
+            className="mt-8 sm:mt-11 text-[4vw] sm:text-[3vw] md:text-[1.5vw] leading-snug"
+          >
+            A Hyper Social Media — where
+            <br /> content to connections, <br />
+            everything is just how you like it.
+          </motion.p>
+        </div>
 
+        {/* Download Button */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 40 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
           }}
-          className="download-button-container"
+          className="mt-6 sm:mt-8"
         >
           <a href={HREF} target="_blank" rel="noopener noreferrer">
             <div className="download-button-wrapper">
@@ -138,7 +139,7 @@ const Homepage = () => {
 
         {/* Scroll Down Icon */}
         <motion.div
-          className="absolute text-[8vw] sm:text-[6vw] md:text-[4vw] bottom-[8vw] sm:bottom-[6vw] md:bottom-[4vw] right-[5vw] animate-bounce"
+          className="absolute text-[10vw] sm:text-[6vw] md:text-[4vw] bottom-[10vw] sm:bottom-[6vw] md:bottom-[4vw] right-[5vw] animate-bounce"
           initial="hidden"
           animate="visible"
           variants={{

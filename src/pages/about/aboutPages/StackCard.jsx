@@ -2,17 +2,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useRef, useState, useEffect, useMemo } from "react";
-import ResponsiveCardStack from "../../../components/about/ResponsiveCardStack";
+const ResponsiveCardStack = React.lazy(() =>
+  import("../../../components/about/ResponsiveCardStack")
+);
 
 gsap.registerPlugin(ScrollTrigger);
-
-const images = [
-  { url: "/image/aboutPage/StackCard1.webp", bgColor: "#1C274C" },
-  { url: "/image/aboutPage/StackCard2.webp", bgColor: "" },
-  { url: "/image/aboutPage/StackCard3.webp", bgColor: "" },
-  { url: "/image/aboutPage/StackCard4.webp", bgColor: "" },
-  { url: "/image/aboutPage/StackCard5.webp", bgColor: "" },
-];
 
 const StackCard = () => {
   const containerRef = useRef(null);
@@ -21,6 +15,20 @@ const StackCard = () => {
   const cardRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(null);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+
+  const images = useMemo(
+    () => [
+      {
+        url: "/image/aboutPage/compressed_StackCard1.webp",
+        bgColor: "#1C274C",
+      },
+      { url: "/image/aboutPage/compressed_StackCard2.webp", bgColor: "" },
+      { url: "/image/aboutPage/compressed_StackCard3.webp", bgColor: "" },
+      { url: "/image/aboutPage/compressed_StackCard4.webp", bgColor: "" },
+      { url: "/image/aboutPage/compressed_StackCard5.webp", bgColor: "" },
+    ],
+    []
+  );
 
   // Handle window resize
   useEffect(() => {
@@ -39,31 +47,43 @@ const StackCard = () => {
     "Be The Buzz Maker",
   ]);
 
-  // Scroll-triggered animation
   useGSAP(() => {
     if (!isDesktop) return;
 
-    gsap.to(cardRefs.current, {
-      yPercent: -100 * (images.length - 1),
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: blackCardRef.current,
-        start: "top 20%",
-        end: `bottom 0%`,
-        scrub: 1,
-        pin: true,
-        markers: false,
-        onUpdate: (self) => {
-          const progress = self.progress;
-          const sectionCount = images.length;
-          const newIndex = Math.floor(progress * (sectionCount - 0.625) + 0.4);
-          const clampedIndex = Math.min(sectionCount - 1, newIndex);
-          if (clampedIndex !== activeIndex) {
-            setActiveIndex(clampedIndex);
-          }
+    const ctx = gsap.context(() => {
+      gsap.to(cardRefs.current, {
+        yPercent: -100 * (images.length - 1),
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: blackCardRef.current,
+          start: "top 20%",
+          end: "bottom 0%",
+          scrub: 1,
+          pin: true,
+          markers: false,
+          invalidateOnRefresh: true, // <-- added this
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const sectionCount = images.length;
+
+            // These constants make it readable
+            const offset = 0.625;
+            const adjustment = 0.4;
+
+            const newIndex = Math.floor(
+              progress * (sectionCount - offset) + adjustment
+            );
+            const clampedIndex = Math.min(sectionCount - 1, newIndex);
+
+            if (clampedIndex !== activeIndex) {
+              setActiveIndex(clampedIndex);
+            }
+          },
         },
-      },
+      });
     });
+
+    return () => ctx.revert();
   }, [isDesktop]);
 
   // Scroll to image when text is clicked
@@ -103,10 +123,12 @@ const StackCard = () => {
                 className={`bg-white h-[30vw] w-[26vw] rounded-3xl shadow-lg transition-transform`}
               >
                 <img
-                  loading="lazy"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  fetchPriority={index === 0 ? "high" : "auto"}
                   src={image.url}
                   alt={`stack-${index}`}
-                  className="object-cover w-full h-full rounded-3xl"
+                  className="object-cover w-full h-full rounded-3xl will-change-transform"
                 />
               </div>
             ))}
