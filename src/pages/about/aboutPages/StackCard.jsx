@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useRef, useState, useEffect, useMemo } from "react";
 const ResponsiveCardStack = React.lazy(() =>
   import("../../../components/about/ResponsiveCardStack")
