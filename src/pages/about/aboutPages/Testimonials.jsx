@@ -42,7 +42,7 @@ const Testimonials = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="md:text-[5vw] text-left text-[14vw] text-[#1C274C] font-poppins sm:text-[4vw] mt-8 sm:mt-0 pb-[5vw] font-bold">
+        <h2 className="md:text-[5vw] text-left sm:text-center text-[14vw] text-[#1C274C] font-poppins sm:text-[4vw] mt-8 sm:mt-0 pb-[5vw] font-bold">
           No Cap, Just&nbsp;
           <span className="text-[#8D93A5]">DVian's</span>
         </h2>
