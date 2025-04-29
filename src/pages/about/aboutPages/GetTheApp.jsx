@@ -30,7 +30,7 @@ const GetTheApp = () => {
       style={{
         loading: "lazy",
         height: "70vh",
-        backgroundImage: "url('/image/aboutPage/GirlImage.png')",
+        backgroundImage: "url('/image/aboutPage/GirlImage.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center bottom",
       }}
@@ -43,9 +43,10 @@ const GetTheApp = () => {
         {/* Heading */}
         <div className="w-full flex items-center flex-col text-left mt-4">
           <h1 className="text-3xl font-bold">
-            <span className="text-purple-800">Get</span> The App
+            <span className="text-purple-800 font-poppins font-bold">Get</span>{" "}
+            The App
           </h1>
-          <p className="text-sm text-white">
+          <p className="text-sm font-openSans text-gray-500">
             Our vision is to revolutionize the way
           </p>
         </div>
@@ -66,7 +67,7 @@ const GetTheApp = () => {
   // Desktop Component (Your Original Component)
   const DesktopComponent = () => (
     <motion.div
-      initial={{ scale: 0.2, opacity: 0 }}
+      initial={{ scale: 0.5, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="relative bg-[#F2F2F4] p-6 md:px-4 md:pt-6 md:pb-0 sm:pb-0 rounded-3xl shadow-2xl shadow-gray-400/40 flex flex-col items-center md:flex-row w-full md:w-full md:h-[80vw] lg:w-[90%] lg:h-[80%] text-center md:text-left"

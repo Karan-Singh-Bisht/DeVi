@@ -52,7 +52,9 @@ const StatCard = ({ image, value, label }) => (
       <h2 className="text-3xl font-medium sm:text-2xl md:text-[3vw]">
         {value.toString().padStart(3, "0")}
       </h2>
-      <p className="text-gray-600 text-lg sm:text-xl md:text-2xl">{label}</p>
+      <p className="text-gray-600 font-openSans text-lg sm:text-xl md:text-2xl">
+        {label}
+      </p>
     </div>
   </div>
 );

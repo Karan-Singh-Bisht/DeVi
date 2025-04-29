@@ -40,10 +40,11 @@ const HorizontalScrollCarousel = () => {
           <div className="bg-white w-full text-left pt-6 px-4 sticky top-0 z-10">
             <img
               loading="lazy"
-              className="rounded-full p-4 w-28 h-28 bg-[#F6F8FF]"
-              src="/image/aboutPage/1_1.png"
+              className="rounded-full bg-gray-200 w-24 h-24 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[6vw] lg:h-[6vw]"
+              src="/image/aboutPage/GirlRightImage.webp"
               alt="Profile"
             />
+
             <h1 className="text-[20vw] tracking-tighter leading-tight sm:text-4xl font-bold font-poppins mt-3">
               Why <br></br> <span className="text-[#8D93A5]">DV</span>
             </h1>
@@ -70,7 +71,7 @@ const HorizontalScrollCarousel = () => {
               <img
                 loading="lazy"
                 className="rounded-full bg-gray-200 w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[6vw] lg:h-[6vw]"
-                src="/image/aboutPage/GirlRightImage.png"
+                src="/image/aboutPage/GirlRightImage.webp"
                 alt="Profile"
               />
               <h1 className="text-3xl sm:text-4xl font-poppins md:text-[5vw] flex flex-col gap-12 text-[#1C274C] font-bold mt-8">

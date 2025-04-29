@@ -54,7 +54,7 @@ const Home = () => {
       {isMobile && (
         <>
           <div className="text-center px-10 pt-10">
-            <h1 className="text-3xl font-serif">DeVi</h1>
+            <h1 className="text-3xl font-serif">DV</h1>
           </div>
           <div className="flex-grow flex flex-col items-center justify-start mt-12">
             <div className="flex flex-col items-center gap-6">
@@ -101,7 +101,7 @@ const Home = () => {
               decoding="async"
               rel="preload"
               loading="eager"
-              src="/image/homePage/1_2.png"
+              src="/image/homePage/1_2.webp"
               className="object-cover w-[80vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]"
               alt="HomeImage"
             />

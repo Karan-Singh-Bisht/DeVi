@@ -28,7 +28,7 @@ export default function Video() {
         }}
       >
         <video
-          src="/video/DV-Intro.mp4"
+          src="/video/DV-Intro.webm"
           className="rounded-full object-cover w-[90vw] h-[90vw] sm:w-[60vw] sm:h-[60vw] md:w-[55vw] md:h-[55vw] lg:w-[40vw] lg:h-[40vw] xl:w-[35vw] xl:h-[35vw]"
           loop
           playsInline

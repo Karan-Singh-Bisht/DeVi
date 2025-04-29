@@ -76,7 +76,7 @@ export default function JoinTheTeam2() {
           height: "200vw",
         }}
       >
-        <h2 className="text-[18vw] font-bold text-center font-amaranth">
+        <h2 className="text-[18vw] font-bold text-center font-poppins">
           Join the
           <br /> <span className="text-gray-400">DV</span> team
         </h2>
