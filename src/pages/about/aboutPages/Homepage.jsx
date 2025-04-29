@@ -45,7 +45,7 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="flex flex-col flex-1 justify-center items-center sm:justify-start mt-[10vw] sm:mt-[8vw] bg-white px-4 sm:px-6 text-center relative"
+        className="flex flex-col flex-1 justify-start items-center sm:justify-start mt-[25vw] sm:mt-[8vw] bg-white px-4 sm:px-6 text-left sm:text-center relative"
         initial="hidden"
         animate="visible"
         variants={{
@@ -72,12 +72,12 @@ const Homepage = () => {
                 rel="preload"
                 loading="eager"
                 decoding="async"
-                className="w-[20vw] h-[12vw] sm:w-32 sm:h-20 md:w-44 md:h-28 rounded-full object-cover inline-block"
+                className="w-[15vw] h-[12vw] sm:w-32 sm:h-20 md:w-44 md:h-28 rounded-full object-cover inline-block"
                 src="/image/aboutPage/Simha.webp"
                 alt="image"
               />
             </span>
-            , It
+            <span className="hidden sm:inline">, It</span>
           </motion.p>
 
           {/* Rotating Words */}
@@ -126,11 +126,11 @@ const Homepage = () => {
             hidden: { opacity: 0, y: 40 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
           }}
-          className="mt-6 sm:mt-8"
+          className="mt-6 sm:mt-8 w-full sm:w-auto"
         >
           <a href={HREF} target="_blank" rel="noopener noreferrer">
-            <div className="download-button-wrapper">
-              <button className="download-button">
+            <div className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto download-button">
                 <span className="download-text">Download Now</span>
               </button>
             </div>

@@ -72,7 +72,7 @@ export default function JoinTheTeam2() {
       <div
         className="flex flex-col items-center justify-center h-screen w-full bg-[#E7F1FF] p-4 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("/image/aboutPage/GirlImage.png")',
+          backgroundImage: 'url("/image/aboutPage/GirlImage.webp")',
           height: "200vw",
         }}
       >
