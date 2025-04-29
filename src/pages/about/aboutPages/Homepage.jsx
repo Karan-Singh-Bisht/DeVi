@@ -72,7 +72,7 @@ const Homepage = () => {
                 rel="preload"
                 loading="eager"
                 decoding="async"
-                className="w-[15vw] h-[12vw] sm:w-32 sm:h-20 md:w-44 md:h-28 rounded-full object-cover inline-block"
+                className="w-[13.5vw] h-[13.5vw] sm:w-32 sm:h-20 md:w-44 md:h-28 rounded-full object-cover inline-block"
                 src="/image/aboutPage/Simha.webp"
                 alt="image"
               />
@@ -95,7 +95,7 @@ const Homepage = () => {
                 {rotatingWords.map((word, i) => (
                   <div
                     key={i}
-                    className="h-14 sm:h-20 md:h-24 lg:h-[7vw] flex items-center justify-center text-4xl xs:text-5xl sm:text-6xl md:text-[6vw] lg:text-[6vw] text-[#8D93A5]"
+                    className="h-14 sm:h-20 md:h-24 lg:h-[7vw] flex items-center justify-center text-3xl xs:text-5xl sm:text-6xl md:text-[6vw] lg:text-[6vw] text-[#8D93A5]"
                   >
                     {word}
                   </div>
