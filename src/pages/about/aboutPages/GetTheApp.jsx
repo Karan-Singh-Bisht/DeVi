@@ -79,13 +79,11 @@ const GetTheApp = () => {
       >
         <div className="w-full h-full flex flex-col justify-between items-center relative z-10">
           <div className="w-full flex items-center flex-col text-left mt-4">
-            <h1 className="text-3xl font-bold">
-              <span className="text-purple-800 font-poppins font-bold">
-                Get
-              </span>{" "}
-              The App
+            <h1 className="text-5xl font-bold">
+              <span className="text-[#1E2A4A] font-poppins font-bold">Get</span>{" "}
+              <span className="text-gray-400">The App</span>
             </h1>
-            <p className="text-sm font-openSans text-gray-500">
+            <p className="text-md font-openSans text-gray-700">
               Our vision is to revolutionize the way
             </p>
           </div>

@@ -140,7 +140,7 @@ export default function Work() {
             <h3 className="text-2xl md:text-2xl font-semibold">Switch Mode</h3>
             <p className="text-gray-500 mt-2 text-sm md:text-sm">
               Tap On Your Name To Switch Accounts Or Set Up A Creator/Business
-              Page.
+              Page & Anonymous(CrazyCorner) Mode.
             </p>
           </div>
         </motion.div>

@@ -73,18 +73,21 @@ export default function JoinTheTeam2() {
         className="flex flex-col items-center justify-center h-screen w-full bg-[#E7F1FF] p-4 bg-cover bg-center"
         style={{
           backgroundImage: 'url("/image/aboutPage/GirlImage.webp")',
-          height: "200vw",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // height: "200vw",
+          // filter: "blur(8px)",
         }}
       >
         <h2 className="text-[18vw] font-bold text-center font-poppins">
-          Join the
-          <br /> <span className="text-gray-400">DV</span> team
+          Join The
+          <br /> <span className="text-gray-400">DV</span> Team
         </h2>
-        <div className="flex gap-4 mt-4">
+        {/* <div className="flex gap-4 mt-4">
           <div className="w-12 h-12 bg-gray-300 rounded-full" />
           <div className="w-12 h-12 bg-gray-300 rounded-full" />
-        </div>
-        <button className="mt-6 rounded-full px-4 py-2 bg-blue-600 text-white font-semibold">
+        </div> */}
+        <button className="mt-5 rounded-xl px-6 py-4 bg-[#172554] text-white text-xl font-semibold">
           Join Now
         </button>
       </div>
@@ -127,7 +130,7 @@ export default function JoinTheTeam2() {
                       animate="visible"
                       variants={buttonContainerVariants}
                     >
-                      <a href="https://apps.apple.com/app/devi-hyper-social-media/id6642651947">
+                      <a target="_blank" href="https://careers.harsar.in">
                         <motion.div variants={buttonItemVariants}>
                           <button className="flex hover:opacity-90 items-center bg-blue-950 text-white px-4 py-2 sm:px-6 sm:py-4 md:px-16 rounded-2xl gap-2 sm:gap-3">
                             <span className="text-base sm:text-xl font-semibold">

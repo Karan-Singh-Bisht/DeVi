@@ -36,7 +36,7 @@ export default function Contact() {
             {/* CTA Button */}
             <button
               className="flex items-center justify-center bg-blue-950 text-white
-                               px-6 py-3 sm:px-8 sm:py-4 rounded-full gap-2 sm:gap-4 
+                               px-6 py-3 sm:px-8 sm:py-4 rounded-xl gap-2 sm:gap-4 
                                text-base sm:text-lg md:text-xl font-semibold hover:opacity-90 transition"
             >
               Let's Catch Up
